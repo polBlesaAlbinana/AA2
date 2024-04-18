@@ -1,12 +1,13 @@
-//
+// Menú principal
 
 // Imagen y forma de la Tierra del menú principal
 PImage Tierra;
 PShape esfera;
 
 // Rotaciones de la Tierra del menú principal
-float rotacionY = 0.08;
+float rotacionY = 0.02;
 float rotacionX = 0.02;
+float rotacionZ = 0.02;
 
 void escenaMenu() {
 
@@ -21,13 +22,14 @@ void escenaMenu() {
   translate(width / 2, height / 2, -2000);
   rotateY(radians(rotacionY));
   rotateX(radians(rotacionX));
+  rotateZ(radians(rotacionZ));
 
   if (rotacionY > 360)
   {
     rotacionY = 0;
   } else
   {
-    rotacionY += 0.08;
+    rotacionY += 0.02;
   }
 
   if (rotacionX > 360)
@@ -37,28 +39,34 @@ void escenaMenu() {
   {
     rotacionX += 0.02;
   }
+  
+   if (rotacionZ > 360)
+  {
+    rotacionZ = 0;
+  } else
+  {
+    rotacionZ += 0.02;
+  }
 
   shape(esfera);
   popMatrix();
 
   // Opciones del menú
   pushMatrix();
-  rectMode(CENTER);
+  textAlign(CENTER, CENTER);
+  textSize(50);
   fill(255);
-  rect(width / 2, height / 2, 500, 50, 30);
+  text("SISTEMA SOLAR", width / 2, height / 2);
   popMatrix();
 
-
-
-
-
-
+  // Creditos
+  pushMatrix();
   textAlign(CENTER, CENTER);
-
   fill(255);
-  stroke(250);
-  line((width / 2) - 136, height - 13, (width / 2) + 136, height - 13);
-  textSize(25);
+  stroke(169);
+  line((width / 2) - 82, height - 17, (width / 2) + 82, height - 17);
+  textSize(15);
   fill(255);
   text("Alfredo Ugarte y Pol Blesa", width / 2, height - 30);
+  popMatrix();
 }
