@@ -9,6 +9,10 @@ float rotacionY = 0.02;
 float rotacionX = 0.02;
 float rotacionZ = 0.02;
 
+// Imagenes opciones del menú
+PImage sistemaSolar;
+boolean mouseSolarSistem = false;
+
 void escenaMenu() {
 
   // Rotación de la Tierra en el menú principal
@@ -39,8 +43,8 @@ void escenaMenu() {
   {
     rotacionX += 0.02;
   }
-  
-   if (rotacionZ > 360)
+
+  if (rotacionZ > 360)
   {
     rotacionZ = 0;
   } else
@@ -53,10 +57,9 @@ void escenaMenu() {
 
   // Opciones del menú
   pushMatrix();
-  textAlign(CENTER, CENTER);
-  textSize(50);
-  fill(255);
-  text("SISTEMA SOLAR", width / 2, height / 2);
+  translate(width / 2.0, height / 2.0);
+  imageMode(CENTER);
+  image(sistemaSolar, 0, 0, 450, 100);
   popMatrix();
 
   // Creditos

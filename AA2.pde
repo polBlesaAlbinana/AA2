@@ -9,7 +9,7 @@ EstadoPantalla actual;
 // Inicialización estrellas del menú principal
 int[] estrellas_x;
 int[] estrellas_y;
-int amount_estrellas = (int)random(50, 100);
+int amount_estrellas = (int)random(75, 150);
 float radius_estrellas = 2.5;
 
 
@@ -33,6 +33,13 @@ void setup() {
   esfera = createShape(SPHERE, 1600);
   esfera.setTexture(Tierra);
 
+  // Imagen de la opción del Sistema Solar en el menú principal
+  if (mouseSolarSistem == false) {
+    sistemaSolar = loadImage("SistemaSolar.png");
+  } else {
+    sistemaSolar = loadImage("SistemaSolarMouse.png");
+  }
+
   // Pantalla del menu principal
   actual = EstadoPantalla.MENU;
 }
@@ -53,6 +60,10 @@ void draw() {
     break;
   }
 }
+
+void mouseMoved() {
+}
+
 
 void escenaSistemaSolar() {
 }
