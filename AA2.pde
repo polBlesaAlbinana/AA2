@@ -15,6 +15,13 @@ float radius_estrellas = 2.5;
 
 void setup() {
 
+   // Tamaño de la pantalla (pantalla completa)
+  fullScreen(P3D);
+  
+  // Pantalla del menu principal
+  actual = EstadoPantalla.MENU;
+  
+  // Fondo del menú principal
   estrellas_x = new int[amount_estrellas];
   estrellas_y = new int[amount_estrellas];
   for (int counter = 0; counter < amount_estrellas; counter++) {
@@ -22,16 +29,12 @@ void setup() {
     estrellas_y[counter] = (int)random(-height, height * 2);
   }
 
-
-  // Tamaño de la pantalla (pantalla completa)
-  fullScreen(P3D);
-
   // Imagen y creación de la Tierra del menú principal
-  Tierra = loadImage("Tierra.jpg");
+  TierraMenu = loadImage("Tierra.jpg");
   noStroke();
   sphereDetail(100);
-  esfera = createShape(SPHERE, 1600);
-  esfera.setTexture(Tierra);
+  esferaTierraMenu = createShape(SPHERE, 1600);
+  esferaTierraMenu.setTexture(TierraMenu);
 
   // Imagen de la opción del Sistema Solar en el menú principal
   if (mouseSolarSistem == false) {
@@ -39,9 +42,21 @@ void setup() {
   } else {
     sistemaSolar = loadImage("SistemaSolarMouse.png");
   }
+  
+  // Imagen i creación del Sol en la escena del sistema solar
+  Sol = loadImage("Tierra.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaSol = createShape(SPHERE, 696);
+  esferaSol.setTexture(Tierra);
+  
+  // Imagen y creación de la Tierra del menú principal
+  Tierra = loadImage("Tierra.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaTierra = createShape(SPHERE, 63.71);
+  esferaTierra.setTexture(Tierra);
 
-  // Pantalla del menu principal
-  actual = EstadoPantalla.MENU;
 }
 
 void draw() {
@@ -50,7 +65,7 @@ void draw() {
 
   switch (actual) {
   case MENU:
-    escenaMenu();
+    escenaSistemaSolar();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -62,10 +77,6 @@ void draw() {
 }
 
 void mouseMoved() {
-}
-
-
-void escenaSistemaSolar() {
 }
 
 void escenaBanderas() {
