@@ -65,7 +65,7 @@ void draw() {
 
   switch (actual) {
   case MENU:
-    escenaSistemaSolar();
+    escenaMenu();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
