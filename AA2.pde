@@ -48,19 +48,70 @@ void setup() {
     sistemaSolar = loadImage("SistemaSolarMouse.png");
   }
 
-  // Imagen i creación del Sol en la escena del sistema solar
-  Sol = loadImage("Tierra.jpg");
-  noStroke();
-  sphereDetail(100);
-  esferaSol = createShape(SPHERE, 696);
-  esferaSol.setTexture(Tierra);
-
-  // Imagen y creación de la Tierra del menú principal
+  // Escena del Sistema Solar
+  // Imagen y creación de la Tierra
   Tierra = loadImage("Tierra.jpg");
   noStroke();
   sphereDetail(100);
   esferaTierra = createShape(SPHERE, 63.71);
   esferaTierra.setTexture(Tierra);
+
+  // Imagen y creación del Sol
+  Sol = loadImage("TexturaSol.jpg");
+  noStroke();
+  sphereDetail(1000);
+  esferaSol = createShape(SPHERE, 696);
+  esferaSol.setTexture(Sol);
+
+  // Imagen y creación de Mercurio
+  Mercurio = loadImage("TexturaMercurio.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaMercurio = createShape(SPHERE, 24.397);
+  esferaMercurio.setTexture(Mercurio);
+
+  // Imagen y creación de Venus
+  Venus = loadImage("TexturaVenus.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaVenus = createShape(SPHERE, 60.518);
+  esferaVenus.setTexture(Venus);
+
+  // Imagen y creación de Marte
+  Marte = loadImage("TexturaMarte.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaMarte = createShape(SPHERE, 33.895);
+  esferaMarte.setTexture(Venus);
+
+  // Imagen y creación de Jupiter
+  Jupiter = loadImage("TexturaJupiter.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaJupiter = createShape(SPHERE, 238.307);
+  esferaJupiter.setTexture(Jupiter);
+
+  // Imagen y creación de Saturno
+  Saturno = loadImage("TexturaSaturno.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaSaturno = createShape(SPHERE, 200.893);
+  esferaSaturno.setTexture(Saturno);
+  
+   // Imagen y creación de Urano
+  Urano = loadImage("TexturaUrano.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaUrano = createShape(SPHERE, 91.167);
+  esferaUrano.setTexture(Urano);
+
+  // Imagen y creación de Neptuno
+  Neptuno = loadImage("TexturaNeptuno.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaNeptuno = createShape(SPHERE, 88.553);
+  esferaNeptuno.setTexture(Neptuno);
+  
 }
 
 void draw() {
@@ -69,7 +120,7 @@ void draw() {
 
   switch (actual) {
   case MENU:
-    escenaMenu();
+    escenaSistemaSolar();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
