@@ -9,6 +9,13 @@ float rotacionTierraMenuX = 0.02;
 float rotacionTierraMenuY = 0.02;
 float rotacionTierraMenuZ = 0.02;
 
+// Tamaño y posición de botones
+int buttonWidth = 200;
+int buttonHeight = 50;
+int buttonX;
+int buttonY1;
+int buttonY2;
+
 // Imagenes opciones del menú
 PImage sistemaSolar;
 boolean mouseSolarSistem = false;
@@ -62,6 +69,27 @@ void escenaMenu() {
   imageMode(CENTER);
   image(sistemaSolar, 0, 0, 450, 100);
   popMatrix();
+
+  // Dibuja los botones para "Recetas" y "Educación"
+  pushMatrix();
+  textAlign(CENTER, CENTER);
+
+  // Botón para "Recetas"
+  fill(200);
+  stroke(0);
+  rect(buttonX, buttonY1, buttonWidth, buttonHeight);
+  fill(0);
+  text("Recetas", buttonX + buttonWidth / 2, buttonY1 + buttonHeight / 2);
+
+  // Botón para "Educación"
+  fill(200);
+  stroke(0);
+  rect(buttonX, buttonY2, buttonWidth, buttonHeight);
+  fill(0);
+  text("Educación", buttonX + buttonWidth / 2, buttonY2 + buttonHeight / 2);
+
+  popMatrix();
+
 
   // Creditos
   pushMatrix();
