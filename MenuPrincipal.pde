@@ -18,6 +18,7 @@ int buttonY2;
 
 // Imagenes opciones del menú
 PImage sistemaSolar;
+PImage sistemaSolarBlack;
 boolean mouseSolarSistem = false;
 
 void escenaMenu() {
@@ -67,28 +68,34 @@ void escenaMenu() {
   pushMatrix();
   translate(width / 2.0, height / 2.0);
   imageMode(CENTER);
-  image(sistemaSolar, 0, 0, 450, 100);
+
+
+  if (mouseOverSolar() == false) {
+    image(sistemaSolar, 0, 0, 450, 100);
+  } else {
+    image(sistemaSolarBlack, 0, 0, 450, 100);
+  }
   popMatrix();
 
-  // Dibuja los botones para "Recetas" y "Educación"
-  pushMatrix();
-  textAlign(CENTER, CENTER);
+  //// Dibuja los botones para "Recetas" y "Educación"
+  //pushMatrix();
+  //textAlign(CENTER, CENTER);
 
-  // Botón para "Recetas"
-  fill(200);
-  stroke(0);
-  rect(buttonX, buttonY1, buttonWidth, buttonHeight);
-  fill(0);
-  text("Recetas", buttonX + buttonWidth / 2, buttonY1 + buttonHeight / 2);
+  //// Botón para "Recetas"
+  //fill(200);
+  //stroke(0);
+  //rect(buttonX, buttonY1, buttonWidth, buttonHeight);
+  //fill(0);
+  //text("Recetas", buttonX + buttonWidth / 2, buttonY1 + buttonHeight / 2);
 
-  // Botón para "Educación"
-  fill(200);
-  stroke(0);
-  rect(buttonX, buttonY2, buttonWidth, buttonHeight);
-  fill(0);
-  text("Educación", buttonX + buttonWidth / 2, buttonY2 + buttonHeight / 2);
+  //// Botón para "Educación"
+  //fill(200);
+  //stroke(0);
+  //rect(buttonX, buttonY2, buttonWidth, buttonHeight);
+  //fill(0);
+  //text("Educación", buttonX + buttonWidth / 2, buttonY2 + buttonHeight / 2);
 
-  popMatrix();
+  //popMatrix();
 
 
   // Creditos

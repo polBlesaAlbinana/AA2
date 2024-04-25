@@ -42,11 +42,12 @@ void setup() {
   esferaTierraMenu.setTexture(TierraMenu);
 
   // Imagen de la opción del Sistema Solar en el menú principal
-  if (mouseSolarSistem == false) {
-    sistemaSolar = loadImage("SistemaSolar.png");
-  } else {
-    sistemaSolar = loadImage("SistemaSolarMouse.png");
-  }
+
+  sistemaSolar = loadImage("SistemaSolar.png");
+
+  sistemaSolarBlack = loadImage("SistemaSolarMouse.png");
+
+
 
   // Escena del Sistema Solar
   // Imagen y creación de la Tierra
@@ -111,16 +112,21 @@ void setup() {
   sphereDetail(100);
   esferaNeptuno = createShape(SPHERE, radioNeptuno);
   esferaNeptuno.setTexture(Neptuno);
+}
 
+boolean mouseOverSolar() {
+  return mouseX >= (width - 450) / 2 && mouseX <= (width - 450) / 2 + 450 &&
+    mouseY >= (height - 100) / 2 && mouseY <= (height - 100) / 2 + 100;
 }
 
 void draw() {
+
 
   background(0);
 
   switch (actual) {
   case MENU:
-    escenaSistemaSolar();
+    escenaMenu();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -156,19 +162,23 @@ void escenaBanderas() {
 }
 void mousePressed() {
   if (actual == EstadoPantalla.MENU) {
-    if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth) {
-      if (mouseY >= buttonY1 && mouseY <= buttonY1 + buttonHeight) {
-        actual = EstadoPantalla.RECETAS; // Cambia a la sección de "Recetas"
-      } else if (mouseY >= buttonY2 && mouseY <= buttonY2 + buttonHeight) {
-        actual = EstadoPantalla.EDUCACION; // Cambia a la sección de "Educación"
-      }
+    if (mouseX >= (width - 450) / 2 && mouseX <= (width - 450) / 2 + 450 &&
+      mouseY >= (height - 100) / 2 && mouseY <= (height - 100) / 2 + 100) {
+      actual = EstadoPantalla.SISTEMA_SOLAR;
     }
+    //if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth) {
+    //  if (mouseY >= buttonY1 && mouseY <= buttonY1 + buttonHeight) {
+    //    actual = EstadoPantalla.RECETAS; // Cambia a la sección de "Recetas"
+    //  } else if (mouseY >= buttonY2 && mouseY <= buttonY2 + buttonHeight) {
+    //    actual = EstadoPantalla.EDUCACION; // Cambia a la sección de "Educación"
+    //  }
+    //}
   }
 }
 
 void escenaRecetas() {
   textAlign(CENTER, CENTER);
-  fill(0);
+  fill(204, 102, 0);
   text("Sección de Recetas:", width / 2, height / 2 - 50);
 
   // Lista de recetas de ejemplo
