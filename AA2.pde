@@ -121,7 +121,6 @@ boolean mouseOverSolar() {
 
 void draw() {
 
-
   background(0);
 
   switch (actual) {
