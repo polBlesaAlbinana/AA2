@@ -52,19 +52,22 @@ void setup() {
   africa = loadImage("africa.png");
 
   // Escena del Sistema Solar
-  // Imagen y creación de la Tierra
-  Tierra = loadImage("Tierra.jpg");
-  noStroke();
-  sphereDetail(100);
-  esferaTierra = createShape(SPHERE, radioTierra);
-  esferaTierra.setTexture(Tierra);
-
   // Imagen y creación del Sol
   Sol = loadImage("TexturaSol.jpg");
   noStroke();
   sphereDetail(1000);
   esferaSol = createShape(SPHERE, radioSol);
   esferaSol.setTexture(Sol);
+
+  esferaSolInf = createShape(SPHERE, radioSolInf);
+  esferaSolInf.setTexture(Sol);
+
+  // Imagen y creación de la Tierra
+  Tierra = loadImage("Tierra.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaTierra = createShape(SPHERE, radioTierra);
+  esferaTierra.setTexture(Tierra);
 
   // Imagen y creación de Mercurio
   Mercurio = loadImage("TexturaMercurio.jpg");

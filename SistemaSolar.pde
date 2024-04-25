@@ -6,13 +6,16 @@ PShape esferaSol;
 float radioSol = 666.0;
 float rotacionSol = 0.12;
 
+PShape esferaSolInf;
+float radioSolInf = 150.0;
+
 // Imagen y forma de la Tierra en la escena del Sistema Solar
 PImage Tierra;
 PShape esferaTierra;
 float radioTierra = 33.71;
 float anguloDeInclinacionTierra = 23.44;
 float rotacionTierra = 0.1;
-int tierraSolRadio = 2700;
+int tierraSolRadio = 2350;
 
 float anguloTierra;
 float velocidadTierra = 0.01;
@@ -24,7 +27,7 @@ float radioMercurio = 9.397;
 float rotacionMercurio = 0.0006;
 float anguloDeInclinacionMercurio = 7.0;
 int distanciaMercurioTierra = 1390;
-int mercurioSolRadio = 1310;
+int mercurioSolRadio = 1060;
 
 float anguloMercurio;
 float velocidadMercurio = 0.016;
@@ -35,7 +38,7 @@ PShape esferaVenus;
 float radioVenus = 30.518;
 float rotacionVenus = 0.0003;
 float anguloDeInclinacionVenus = 3.39;
-int venusSolRadio = 2050;
+int venusSolRadio = 1800;
 
 float anguloVenus;
 float velocidadVenus = 0.012;
@@ -46,7 +49,7 @@ PShape esferaMarte;
 float radioMarte = 13.895;
 float rotacionMarte = 0.05;
 float anguloDeInclinacionMarte = 25.19;
-int marteSolRadio = 3450;
+int marteSolRadio = 2700;
 
 float anguloMarte;
 float velocidadMarte = 0.008;
@@ -58,7 +61,7 @@ PShape esferaJupiter;
 float radioJupiter = 208.307;
 float rotacionJupiter = 1.2;
 float anguloDeInclinacionJupiter = 3.12;
-int jupiterSolRadio = 4850;
+int jupiterSolRadio = 4000;
 
 float anguloJupiter;
 float velocidadJupiter = 0.000004;
@@ -69,7 +72,7 @@ PShape esferaSaturno;
 float radioSaturno = 170.893;
 float rotacionSaturno = 1.0;
 float anguloDeInclinacionSaturno = 26.73;
-int saturnoSolRadio = 6350;
+int saturnoSolRadio = 5200;
 
 float anguloSaturno;
 float velocidadSaturno = 0.000003;
@@ -80,7 +83,7 @@ PShape esferaUrano;
 float radioUrano = 61.167;
 float rotacionUrano = 0.883;
 float anguloDeInclinacionUrano = 97.86;
-int uranoSolRadio = 8100;
+int uranoSolRadio = 6050;
 
 float anguloUrano;
 float velocidadUrano = 0.000002;
@@ -91,7 +94,7 @@ PShape esferaNeptuno;
 float radioNeptuno = 58.553;
 float rotacionNeptuno = 0.58;
 float anguloDeInclinacionNeptuno = 28.32;
-int neptunoSolRadio = 9600;
+int neptunoSolRadio = 6850;
 
 float anguloNeptuno;
 float velocidadNeptuno = 0.000001;
@@ -101,10 +104,38 @@ void escenaSistemaSolar() {
 
   noCursor();
 
-  translate(width / 2, height / 2, -2500);
+  // Rectángulo informativo
+  pushMatrix();
 
-  // ambientLight(255, 255, 255, -distanciaSolTierra, 0, 0);
+  triangle(50, height - 25, 70, height - 20, 70, height - 30);
+  triangle(width - 50, height - 25, width - 70, height - 20, width - 70, height - 30);
+  line(50, height - 25, width - 50, height - 25);
 
+  rectMode(CENTER);
+  stroke(255);
+  fill(0);
+  rect(width / 2, height, width, 750);
+
+  pushMatrix();
+  translate(200, height - 200, -112.78);
+  rotateY(radians(rotacionSol));
+  if (rotacionSol > 360)
+  {
+    rotacionSol = 0;
+  } else
+  {
+    rotacionSol += 0.12;
+  }
+
+  shape(esferaSolInf);
+  popMatrix();
+
+  popMatrix();
+
+
+  ambientLight(255, 255, 255, width / 2, height / 2, 0);
+
+  translate(width / 2, height / 4, -2500);
   rotateX(radians(330));
   rotateY(mouseX * 0.01);
 
@@ -157,6 +188,7 @@ void escenaSistemaSolar() {
   translate(mercurioSolRadio, 0.0, 0.0);
   rotateX(radians(anguloDeInclinacionMercurio));
   shape(esferaMercurio);
+
   popMatrix();
 
   // Venus
@@ -233,7 +265,7 @@ void escenaSistemaSolar() {
 
   // Urano
   pushMatrix();
-  
+
   rotateY(radians(rotacionUrano));
   if (rotacionUrano > 360)
   {
