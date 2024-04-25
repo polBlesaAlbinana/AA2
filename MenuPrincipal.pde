@@ -19,7 +19,6 @@ int buttonY2;
 // Imagenes opciones del menú
 PImage sistemaSolar;
 PImage sistemaSolarBlack;
-boolean mouseSolarSistem = false;
 
 void escenaMenu() {
 

@@ -115,8 +115,8 @@ void setup() {
 }
 
 boolean mouseOverSolar() {
-  return mouseX >= (width - 450) / 2 && mouseX <= (width - 450) / 2 + 450 &&
-    mouseY >= (height - 100) / 2 && mouseY <= (height - 100) / 2 + 100;
+  return mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+    mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
 }
 
 void draw() {
@@ -161,8 +161,8 @@ void escenaBanderas() {
 }
 void mousePressed() {
   if (actual == EstadoPantalla.MENU) {
-    if (mouseX >= (width - 450) / 2 && mouseX <= (width - 450) / 2 + 450 &&
-      mouseY >= (height - 100) / 2 && mouseY <= (height - 100) / 2 + 100) {
+    if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+      mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50) {
       actual = EstadoPantalla.SISTEMA_SOLAR;
     }
     //if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth) {
