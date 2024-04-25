@@ -53,65 +53,65 @@ void setup() {
   Tierra = loadImage("Tierra.jpg");
   noStroke();
   sphereDetail(100);
-  esferaTierra = createShape(SPHERE, 63.71);
+  esferaTierra = createShape(SPHERE, radioTierra);
   esferaTierra.setTexture(Tierra);
 
   // Imagen y creación del Sol
   Sol = loadImage("TexturaSol.jpg");
   noStroke();
   sphereDetail(1000);
-  esferaSol = createShape(SPHERE, 696);
+  esferaSol = createShape(SPHERE, radioSol);
   esferaSol.setTexture(Sol);
 
   // Imagen y creación de Mercurio
   Mercurio = loadImage("TexturaMercurio.jpg");
   noStroke();
   sphereDetail(100);
-  esferaMercurio = createShape(SPHERE, 24.397);
+  esferaMercurio = createShape(SPHERE, radioMercurio);
   esferaMercurio.setTexture(Mercurio);
 
   // Imagen y creación de Venus
   Venus = loadImage("TexturaVenus.jpg");
   noStroke();
   sphereDetail(100);
-  esferaVenus = createShape(SPHERE, 60.518);
+  esferaVenus = createShape(SPHERE, radioVenus);
   esferaVenus.setTexture(Venus);
 
   // Imagen y creación de Marte
   Marte = loadImage("TexturaMarte.jpg");
   noStroke();
   sphereDetail(100);
-  esferaMarte = createShape(SPHERE, 33.895);
+  esferaMarte = createShape(SPHERE, radioMarte);
   esferaMarte.setTexture(Venus);
 
   // Imagen y creación de Jupiter
   Jupiter = loadImage("TexturaJupiter.jpg");
   noStroke();
   sphereDetail(100);
-  esferaJupiter = createShape(SPHERE, 238.307);
+  esferaJupiter = createShape(SPHERE, radioJupiter);
   esferaJupiter.setTexture(Jupiter);
 
   // Imagen y creación de Saturno
   Saturno = loadImage("TexturaSaturno.jpg");
   noStroke();
   sphereDetail(100);
-  esferaSaturno = createShape(SPHERE, 200.893);
+  esferaSaturno = createShape(SPHERE, radioSaturno);
   esferaSaturno.setTexture(Saturno);
-  
-   // Imagen y creación de Urano
+
+  // Imagen y creación de Urano
   Urano = loadImage("TexturaUrano.jpg");
   noStroke();
   sphereDetail(100);
-  esferaUrano = createShape(SPHERE, 91.167);
+  esferaUrano = createShape(SPHERE, radioUrano);
   esferaUrano.setTexture(Urano);
 
   // Imagen y creación de Neptuno
   Neptuno = loadImage("TexturaNeptuno.jpg");
   noStroke();
   sphereDetail(100);
-  esferaNeptuno = createShape(SPHERE, 88.553);
+  esferaNeptuno = createShape(SPHERE, radioNeptuno);
   esferaNeptuno.setTexture(Neptuno);
-  
+
 }
 
 void draw() {
