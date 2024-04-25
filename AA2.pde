@@ -46,7 +46,9 @@ void setup() {
   sistemaSolar = loadImage("SistemaSolar.png");
 
   sistemaSolarBlack = loadImage("SistemaSolarMouse.png");
-
+  // Imagen Continentes
+  continentes = loadImage("Continentes.png");
+  continentesBlack = loadImage("ContinentesBlack.png");
 
 
   // Escena del Sistema Solar
@@ -116,8 +118,14 @@ void setup() {
 
 boolean mouseOverSolar() {
   return mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
-    mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
+    mouseY >= (height - 50) / 2 -100 && mouseY <= (height - 150) / 2 - 100 + 100;
 }
+
+boolean mouseOverContinentes() {
+  return mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+     mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
+}
+
 
 void draw() {
 
@@ -162,9 +170,13 @@ void escenaBanderas() {
 void mousePressed() {
   if (actual == EstadoPantalla.MENU) {
     if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
-      mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50) {
+    mouseY >= (height - 50) / 2 -100 && mouseY <= (height - 150) / 2 - 100 + 100
+      ) {
       actual = EstadoPantalla.SISTEMA_SOLAR;
-    }
+    }else if(mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+     mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50){
+       actual = EstadoPantalla.RECETAS;
+     }
     //if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth) {
     //  if (mouseY >= buttonY1 && mouseY <= buttonY1 + buttonHeight) {
     //    actual = EstadoPantalla.RECETAS; // Cambia a la sección de "Recetas"

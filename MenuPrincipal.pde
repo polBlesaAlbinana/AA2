@@ -19,6 +19,8 @@ int buttonY2;
 // Imagenes opciones del menú
 PImage sistemaSolar;
 PImage sistemaSolarBlack;
+PImage continentes;
+PImage continentesBlack;
 
 void escenaMenu() {
 
@@ -68,11 +70,16 @@ void escenaMenu() {
   translate(width / 2.0, height / 2.0);
   imageMode(CENTER);
 
-
-  if (mouseOverSolar() == false) {
-    image(sistemaSolar, 0, 0, 450, 100);
+ if (mouseOverContinentes() == false) {
+    image(continentes, 0, 0, 450, 100);
   } else {
-    image(sistemaSolarBlack, 0, 0, 450, 100);
+    image(continentesBlack, 0, 0, 450, 100);
+  }
+   
+  if (mouseOverSolar() == false) {
+    image(sistemaSolar, 0, -100, 450, 100);
+  } else {
+    image(sistemaSolarBlack, 0, -100, 450, 100);
   }
   popMatrix();
 
