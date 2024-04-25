@@ -21,6 +21,7 @@ PImage sistemaSolar;
 PImage sistemaSolarBlack;
 PImage continentes;
 PImage continentesBlack;
+PImage africa;
 
 void escenaMenu() {
 

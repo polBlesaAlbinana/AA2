@@ -1,7 +1,7 @@
 //PRÁCTICA AA2: Alfredo Ugarte y Pol Blesa
 
 enum EstadoPantalla {
-  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION
+  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES
 }
 
 EstadoPantalla actual;
@@ -49,7 +49,7 @@ void setup() {
   // Imagen Continentes
   continentes = loadImage("Continentes.png");
   continentesBlack = loadImage("ContinentesBlack.png");
-
+  africa = loadImage("africa.png");
 
   // Escena del Sistema Solar
   // Imagen y creación de la Tierra
@@ -123,7 +123,7 @@ boolean mouseOverSolar() {
 
 boolean mouseOverContinentes() {
   return mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
-     mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
+    mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
 }
 
 
@@ -146,6 +146,9 @@ void draw() {
     break;
   case EDUCACION:
     escenaEducacion();
+    break;
+  case CONTINENTES:
+    escenaContinentes();
     break;
   }
 }
@@ -170,13 +173,13 @@ void escenaBanderas() {
 void mousePressed() {
   if (actual == EstadoPantalla.MENU) {
     if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
-    mouseY >= (height - 50) / 2 -100 && mouseY <= (height - 150) / 2 - 100 + 100
+      mouseY >= (height - 50) / 2 -100 && mouseY <= (height - 150) / 2 - 100 + 100
       ) {
       actual = EstadoPantalla.SISTEMA_SOLAR;
-    }else if(mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
-     mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50){
-       actual = EstadoPantalla.RECETAS;
-     }
+    } else if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+      mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50) {
+      actual = EstadoPantalla.CONTINENTES;
+    }
     //if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth) {
     //  if (mouseY >= buttonY1 && mouseY <= buttonY1 + buttonHeight) {
     //    actual = EstadoPantalla.RECETAS; // Cambia a la sección de "Recetas"
@@ -184,6 +187,10 @@ void mousePressed() {
     //    actual = EstadoPantalla.EDUCACION; // Cambia a la sección de "Educación"
     //  }
     //}
+  } else if (actual == EstadoPantalla.CONTINENTES) {
+    if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+      mouseY >= (height - 200) / 2 && mouseY <= (height - 200) / 2 + 200) {
+    }
   }
 }
 
@@ -203,6 +210,51 @@ void escenaRecetas() {
   for (int i = 0; i < recetas.length; i++) {
     text(recetas[i], width / 2, height / 2 + i * 30);
   }
+  translate(width / 2.0, height / 2.0);
+  imageMode(CENTER);
+}
+
+void escenaContinentes() {
+  //background(#555FED);
+  //image(africa, 400, 200, 350, 400);
+  pointLight(255, 255, 255, width, height, 1000);
+   // Posicionamiento de las estrellas
+  translate(0, 0, -1450);
+  for (int counter = 0; counter < amount_estrellas; counter++) {
+    ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
+  }
+  translate(0, 0, 1450);
+  translate(width / 2, height / 2, -2000);
+  rotateX(radians(rotacionTierraMenuX));
+  rotateY(radians(rotacionTierraMenuY));
+  rotateZ(radians(rotacionTierraMenuZ));
+
+  if (rotacionTierraMenuX > 360)
+  {
+    rotacionTierraMenuX = 0;
+  } else
+  {
+    rotacionTierraMenuX += 0.02;
+  }
+
+  if (rotacionTierraMenuY > 360)
+  {
+    rotacionTierraMenuY = 0;
+  } else
+  {
+    rotacionTierraMenuY += 0.02;
+  }
+
+  if (rotacionTierraMenuZ > 360)
+  {
+    rotacionTierraMenuZ = 0;
+  } else
+  {
+    rotacionTierraMenuZ += 0.02;
+  }
+
+  shape(esferaTierraMenu);
+  
 }
 
 void escenaEducacion() {
