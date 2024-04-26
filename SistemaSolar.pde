@@ -107,14 +107,24 @@ void escenaSistemaSolar() {
   // Rectángulo informativo
   pushMatrix();
 
-  triangle(50, height - 25, 70, height - 20, 70, height - 30);
-  triangle(width - 50, height - 25, width - 70, height - 20, width - 70, height - 30);
-  line(50, height - 25, width - 50, height - 25);
+  triangle(50, height - 45, 70, height - 40, 70, height - 50);
+  triangle(width - 50, height - 45, width - 70, height - 40, width - 70, height - 50);
+  line(70, height - 45, width - 70, height - 45);
 
   rectMode(CENTER);
   stroke(255);
   fill(0);
   rect(width / 2, height, width, 750);
+
+  // Texto informativo del Sol
+  textAlign(CENTER, CENTER);
+  textSize(20);
+  fill(255);
+  text("0 km", 200, height - 85);
+  textAlign(CENTER, CENTER);
+  textSize(15);
+  fill(255);
+  text("0", 200, height - 25);
 
   pushMatrix();
   translate(200, height - 200, -112.78);
