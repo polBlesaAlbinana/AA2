@@ -69,12 +69,18 @@ void setup() {
   esferaTierra = createShape(SPHERE, radioTierra);
   esferaTierra.setTexture(Tierra);
 
+  esferaTierraInf = createShape(SPHERE, radioTierraInf);
+  esferaTierraInf.setTexture(Tierra);
+
   // Imagen y creación de Mercurio
   Mercurio = loadImage("TexturaMercurio.jpg");
   noStroke();
   sphereDetail(100);
   esferaMercurio = createShape(SPHERE, radioMercurio);
   esferaMercurio.setTexture(Mercurio);
+
+  esferaMercurioInf = createShape(SPHERE, radioMercurioInf);
+  esferaMercurioInf.setTexture(Mercurio);
 
   // Imagen y creación de Venus
   Venus = loadImage("TexturaVenus.jpg");
@@ -83,12 +89,18 @@ void setup() {
   esferaVenus = createShape(SPHERE, radioVenus);
   esferaVenus.setTexture(Venus);
 
+  esferaVenusInf = createShape(SPHERE, radioVenusInf);
+  esferaVenusInf.setTexture(Venus);
+
   // Imagen y creación de Marte
   Marte = loadImage("TexturaMarte.jpg");
   noStroke();
   sphereDetail(100);
   esferaMarte = createShape(SPHERE, radioMarte);
   esferaMarte.setTexture(Venus);
+
+  esferaMarteInf = createShape(SPHERE, radioMarteInf);
+  esferaMarteInf.setTexture(Marte);
 
   // Imagen y creación de Jupiter
   Jupiter = loadImage("TexturaJupiter.jpg");
@@ -97,12 +109,18 @@ void setup() {
   esferaJupiter = createShape(SPHERE, radioJupiter);
   esferaJupiter.setTexture(Jupiter);
 
+  esferaJupiterInf = createShape(SPHERE, radioJupiterInf);
+  esferaJupiterInf.setTexture(Jupiter);
+
   // Imagen y creación de Saturno
   Saturno = loadImage("TexturaSaturno.jpg");
   noStroke();
   sphereDetail(100);
   esferaSaturno = createShape(SPHERE, radioSaturno);
   esferaSaturno.setTexture(Saturno);
+
+  esferaSaturnoInf = createShape(SPHERE, radioSaturnoInf);
+  esferaSaturnoInf.setTexture(Saturno);
 
   // Imagen y creación de Urano
   Urano = loadImage("TexturaUrano.jpg");
@@ -111,12 +129,18 @@ void setup() {
   esferaUrano = createShape(SPHERE, radioUrano);
   esferaUrano.setTexture(Urano);
 
+  esferaUranoInf = createShape(SPHERE, radioUranoInf);
+  esferaUranoInf.setTexture(Urano);
+
   // Imagen y creación de Neptuno
   Neptuno = loadImage("TexturaNeptuno.jpg");
   noStroke();
   sphereDetail(100);
   esferaNeptuno = createShape(SPHERE, radioNeptuno);
   esferaNeptuno.setTexture(Neptuno);
+
+  esferaNeptunoInf = createShape(SPHERE, radioNeptunoInf);
+  esferaNeptunoInf.setTexture(Neptuno);
 }
 
 boolean mouseOverSolar() {
@@ -136,7 +160,7 @@ void draw() {
 
   switch (actual) {
   case MENU:
-    escenaMenu();
+    escenaSistemaSolar();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -221,7 +245,7 @@ void escenaContinentes() {
   //background(#555FED);
   //image(africa, 400, 200, 350, 400);
   pointLight(255, 255, 255, width, height, 1000);
-   // Posicionamiento de las estrellas
+  // Posicionamiento de las estrellas
   translate(0, 0, -1450);
   for (int counter = 0; counter < amount_estrellas; counter++) {
     ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
@@ -257,7 +281,6 @@ void escenaContinentes() {
   }
 
   shape(esferaTierraMenu);
-  
 }
 
 void escenaEducacion() {
