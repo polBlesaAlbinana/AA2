@@ -130,7 +130,6 @@ void escenaSistemaSolar() {
   // Rectángulo informativo
   pushMatrix();
 
-
   triangle(width - 50, height - 45, width - 70, height - 40, width - 70, height - 50);
   line(-5, height - 45, width - 70, height - 45);
 
@@ -147,9 +146,37 @@ void escenaSistemaSolar() {
   fill(255);
   text("EL SOL", 200, height - 325);
   // Mercurio
-  textSize(30);
+  textSize(20);
   fill(255);
-  text("MERCURIO", 495, height - 165);
+  text("MERCURIO", 495, height - 155);
+  // Venus
+  textSize(20);
+  fill(255);
+  text("VENUS", 670, height - 180);
+  // La Tierra
+  textSize(20);
+  fill(255);
+  text("LA TIERRA", 845, height - 180);
+  // Marte
+  textSize(20);
+  fill(255);
+  text("MARTE", 1020, height - 170);
+  // Jupiter
+  textSize(20);
+  fill(255);
+  text("JUPITER", 1195, height - 250);
+  // Saturno
+  textSize(20);
+  fill(255);
+  text("SATURNO", 1370, height - 250);
+  // Urano
+  textSize(20);
+  fill(255);
+  text("URANO", 1545, height - 180);
+  // Neptuno
+  textSize(20);
+  fill(255);
+  text("NEPTUNO", 1720, height - 180);
   popMatrix();
 
   // Texto informativo del Sol
