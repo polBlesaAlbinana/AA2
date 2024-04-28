@@ -7,7 +7,7 @@
 //EstadoPantalla estadoActual;
 // Definición de la enumeración para las escenas
 enum EstadoPantalla {
-  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA,AREPAS
+  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS
 }
 
 // Variable para el estado estadoActual de la pantalla
@@ -172,7 +172,7 @@ void draw() {
 
   switch (estadoActual) {
   case MENU:
-    escenaMenu();
+    escenaSistemaSolar();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -201,7 +201,7 @@ void draw() {
   case TARTA_PAVLOVA:
     escenaTartaPavlova();
     break;
-     case AREPAS:
+  case AREPAS:
     escenaArepas();
     break;
   }
@@ -424,6 +424,42 @@ void mousePressed() {
           break;
         }
       }
+    }
+  }
+}
+
+void keyPressed() {
+  if (estadoActual == EstadoPantalla.SISTEMA_SOLAR) {
+    switch(key) {
+    case 0:
+
+      break;
+    case 1:
+  
+      break;
+    case 2:
+
+      break;
+    case 3:
+
+      break;
+    case 4:
+
+      break;
+    case 5:
+
+      break;
+    case 6:
+
+      break;
+    case 7:
+
+      break;
+    case 8:
+
+      break;
+    default:
+      break;
     }
   }
 }

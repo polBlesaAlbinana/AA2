@@ -29,7 +29,6 @@ PShape esferaMercurio;
 float radioMercurio = 9.397;
 float rotacionMercurio = 0.0006;
 float anguloDeInclinacionMercurio = 7.0;
-int distanciaMercurioTierra = 1390;
 int mercurioSolRadio = 1060;
 
 float anguloMercurio;
@@ -122,12 +121,24 @@ float velocidadNeptuno = 0.000001;
 PShape esferaNeptunoInf;
 float radioNeptunoInf = 50.0;
 
+// Cámara
+int posCamX = -width / 2;
+int posCamY = -height / 4;
+int posCamZ = 900;
+
+
+int posVistaCamX = width / 2;
+int posVistaCamY = height / 4;
+int posVistaCamZ = -2500;
+
+
+
 
 void escenaSistemaSolar() {
 
   noCursor();
 
-  // Rectángulo informativo
+ // Rectángulo informativo
   pushMatrix();
 
   triangle(width - 50, height - 45, width - 70, height - 40, width - 70, height - 50);
@@ -424,12 +435,16 @@ void escenaSistemaSolar() {
 
   popMatrix();
 
+  pushMatrix();
 
+  camera(posCamX, posCamY, posCamZ, posVistaCamX, posVistaCamY, posVistaCamZ, 0, 0.5, 1);
+  
   ambientLight(255, 255, 255, width / 2, height / 2, 0);
 
   translate(width / 2, height / 4, -2500);
   rotateX(radians(330));
   rotateY(mouseX * 0.01);
+
 
   // Sol
   pushMatrix();
@@ -591,6 +606,8 @@ void escenaSistemaSolar() {
   shape(esferaNeptuno);
   popMatrix();
 
+  popMatrix();
+
   // Angulos de los planetas
   anguloTierra += velocidadTierra;
   anguloMercurio += velocidadMercurio;
@@ -600,4 +617,5 @@ void escenaSistemaSolar() {
   anguloSaturno += velocidadSaturno;
   anguloUrano += velocidadUrano;
   anguloNeptuno += velocidadNeptuno;
+
 }
