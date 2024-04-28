@@ -153,6 +153,98 @@ void setup() {
 
   esferaNeptunoInf = createShape(SPHERE, radioNeptunoInf);
   esferaNeptunoInf.setTexture(Neptuno);
+
+
+  // Escena Banderas
+
+  // África
+  // Marruecos
+  marruecosFlag = loadImage("Marruecos.png");
+  strokeWeight(1.5);
+  stroke(255);
+  marruecosShape = createShape(RECT, 45, 100, banderasX, banderasY);
+  marruecosShape.setTexture(marruecosFlag);
+  // Sudáfrica
+  sudafricaFlag = loadImage("Sudafrica.png");
+  strokeWeight(1.5);
+  stroke(255);
+  sudafricaShape = createShape(RECT, 445.6, 100, banderasX, banderasY);
+  sudafricaShape.setTexture(sudafricaFlag);
+  // Egipto
+  egiptoFlag = loadImage("Egipto.png");
+  strokeWeight(1.5);
+  stroke(255);
+  egiptoShape = createShape(RECT, 846.2, 100, banderasX, banderasY);
+  egiptoShape.setTexture(egiptoFlag);
+  // Nigeria
+  nigeriaFlag = loadImage("Nigeria.png");
+  strokeWeight(1.5);
+  stroke(255);
+  nigeriaShape = createShape(RECT, 1246.76, 100, banderasX, banderasY);
+  nigeriaShape.setTexture(nigeriaFlag);
+  // Uganda
+  ugandaFlag = loadImage("Uganda.png");
+  strokeWeight(1.5);
+  stroke(255);
+  ugandaShape = createShape(RECT, 1647.32, 100, banderasX, banderasY);
+  ugandaShape.setTexture(ugandaFlag);
+  // Kenia
+  keniaFlag = loadImage("Kenia.png");
+  strokeWeight(1.5);
+  stroke(255);
+  keniaShape = createShape(RECT, 2047.88, 100, banderasX, banderasY);
+  keniaShape.setTexture(keniaFlag);
+  // Madagascar
+  madagascarFlag = loadImage("Madagascar.png");
+  strokeWeight(1.5);
+  stroke(255);
+  madagascarShape = createShape(RECT, 2448.44, 100, banderasX, banderasY);
+  madagascarShape.setTexture(madagascarFlag);
+  
+  // Europa
+  // Inglaterra
+  inglaterraFlag = loadImage("Inglaterra.png");
+  strokeWeight(1.5);
+  stroke(255);
+  inglaterraShape = createShape(RECT, 45, 431, banderasX, banderasY);
+  inglaterraShape.setTexture(inglaterraFlag);
+  // Francia
+  franciaFlag = loadImage("Francia.png");
+  strokeWeight(1.5);
+  stroke(255);
+  franciaShape = createShape(RECT, 445.6, 431, banderasX, banderasY);
+  franciaShape.setTexture(franciaFlag);
+  // Alemania
+  alemaniaFlag = loadImage("Alemania.png");
+  strokeWeight(1.5);
+  stroke(255);
+  alemaniaShape = createShape(RECT, 846.2, 431, banderasX, banderasY);
+  alemaniaShape.setTexture(alemaniaFlag);
+  // Paises Bajos
+  paisesBajosFlag = loadImage("PaisesBajos.png");
+  strokeWeight(1.5);
+  stroke(255);
+  paisesBajosShape = createShape(RECT, 1246.76, 431, banderasX, banderasY);
+  paisesBajosShape.setTexture(paisesBajosFlag);
+  // Espanya
+  espanyaFlag = loadImage("Espanya.png");
+  strokeWeight(1.5);
+  stroke(255);
+  espanyaShape = createShape(RECT, 1647.32, 431, banderasX, banderasY);
+  espanyaShape.setTexture(espanyaFlag);
+  // Ucrania
+  ucraniaFlag = loadImage("Ucrania.png");
+  strokeWeight(1.5);
+  stroke(255);
+  ucraniaShape = createShape(RECT, 2047.88, 431, banderasX, banderasY);
+  ucraniaShape.setTexture(ucraniaFlag);
+  // Italia
+  italiaFlag = loadImage("Italia.png");
+  strokeWeight(1.5);
+  stroke(255);
+  italiaShape = createShape(RECT, 2448.44, 431, banderasX, banderasY);
+  italiaShape.setTexture(italiaFlag);
+
 }
 
 boolean mouseOverSolar() {
@@ -172,7 +264,7 @@ void draw() {
 
   switch (estadoActual) {
   case MENU:
-    escenaSistemaSolar();
+    escenaBanderas();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -208,21 +300,6 @@ void draw() {
 }
 
 void mouseMoved() {
-}
-
-void escenaBanderas() {
-  /*
-   pushMatrix();
-   rotateY(radians(mouseX));
-   
-   translate (width, height / 2);
-   fill(255);
-   stroke(100);
-   strokeWeight(5);
-   sphereDetail(9);
-   sphere(100);
-   popMatrix();
-   */
 }
 
 void escenaRecetas() {
@@ -435,7 +512,7 @@ void keyPressed() {
 
       break;
     case 1:
-  
+
       break;
     case 2:
 
