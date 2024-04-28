@@ -288,8 +288,8 @@ void setup() {
   stroke(255);
   hondurasShape = createShape(RECT, 2448.44, 762, banderasX, banderasY);
   hondurasShape.setTexture(hondurasFlag);
-  
-   // Asia
+
+  // Asia
   // Japón
   japonFlag = loadImage("Japón.png");
   strokeWeight(1.5);
@@ -332,6 +332,50 @@ void setup() {
   stroke(255);
   cambodjaShape = createShape(RECT, 2448.44, 1093, banderasX, banderasY);
   cambodjaShape.setTexture(cambodjaFlag);
+
+  // Oceanía
+  // Australia
+  australiaFlag = loadImage("Australia.png");
+  strokeWeight(1.5);
+  stroke(255);
+  australiaShape = createShape(RECT, 45, 1424, banderasX, banderasY);
+  australiaShape.setTexture(australiaFlag);
+  // Nueva Zelanda
+  nuevaZelandaFlag = loadImage("NuevaZelanda.png");
+  strokeWeight(1.5);
+  stroke(255);
+  nuevaZelandaShape = createShape(RECT, 445.6, 1424, banderasX, banderasY);
+  nuevaZelandaShape.setTexture(nuevaZelandaFlag);
+  // Fiyi
+  fiyiFlag = loadImage("Fiyi.png");
+  strokeWeight(1.5);
+  stroke(255);
+  fiyiShape = createShape(RECT, 846.2, 1424, banderasX, banderasY);
+  fiyiShape.setTexture(fiyiFlag);
+  // Papúa Nueva Guinea
+  papuaNuevaGuineaFlag = loadImage("PapúaNuevaGuinea.png");
+  strokeWeight(1.5);
+  stroke(255);
+  papuaNuevaGuineaShape = createShape(RECT, 1246.76, 1424, banderasX, banderasY);
+  papuaNuevaGuineaShape.setTexture(papuaNuevaGuineaFlag);
+  // Tonga
+  tongaFlag = loadImage("Tonga.png");
+  strokeWeight(1.5);
+  stroke(255);
+  tongaShape = createShape(RECT, 1647.32, 1424, banderasX, banderasY);
+  tongaShape.setTexture(tongaFlag);
+  // Kiribati
+  kiribatiFlag = loadImage("Kiribati.png");
+  strokeWeight(1.5);
+  stroke(255);
+  kiribatiShape = createShape(RECT, 2047.88, 1424, banderasX, banderasY);
+  kiribatiShape.setTexture(kiribatiFlag);
+  // Tuvalu
+  tuvaluFlag = loadImage("Tuvalu.png");
+  strokeWeight(1.5);
+  stroke(255);
+  tuvaluShape = createShape(RECT, 2448.44, 1424, banderasX, banderasY);
+  tuvaluShape.setTexture(tuvaluFlag);
 }
 
 boolean mouseOverSolar() {

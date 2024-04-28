@@ -99,6 +99,30 @@ PImage cambodjaFlag;
 PShape cambodjaShape;
 
 
+// Oceanía
+// Australia
+PImage australiaFlag;
+PShape australiaShape;
+// Nueva Zelanda
+PImage nuevaZelandaFlag;
+PShape nuevaZelandaShape;
+// Fiyi
+PImage fiyiFlag;
+PShape fiyiShape;
+// Papúa Nueva Guinea
+PImage papuaNuevaGuineaFlag;
+PShape papuaNuevaGuineaShape;
+// Tonga
+PImage tongaFlag;
+PShape tongaShape;
+// Kiribati
+PImage kiribatiFlag;
+PShape kiribatiShape;
+// Tuvalu
+PImage tuvaluFlag;
+PShape tuvaluShape;
+
+
 
 void escenaBanderas() {
 
@@ -125,23 +149,23 @@ void escenaBanderas() {
   textAlign (LEFT, CENTER);
   textSize(35);
   fill(255, 0, 0);
-  text("África", 40, 45);
+  text("África", 40, 60);
   // Europa
   textSize(35);
   fill(255, 0, 0);
-  text("Europa", 40, 369);
+  text("Europa", 40, 384);
   // América
   textSize(35);
   fill(255, 0, 0);
-  text("América", 40, 693);
+  text("América", 40, 713);
   //Asia
   textSize(35);
   fill(255, 0, 0);
-  text("Asia", 40, 1017);
+  text("Asia", 40, 1037);
   // Oceanía
   textSize(35);
   fill(255, 0, 0);
-  text("Oceanía", 40, 1341);
+  text("Oceanía", 40, 1371);
 
   // Continentes y sus paises
   rectMode(CENTER);
@@ -294,4 +318,41 @@ void escenaBanderas() {
   textSize(20);
   fill(255);
   text("CAMBODJA", 2626.24, 1308.6);
+  
+  // Oceanía
+  // Australia
+  shape(australiaShape);
+  textSize(20);
+  fill(255);
+  text("AUSTRALIA", 222.78, 1639.6);
+  // Nueva Zelanda
+  shape(nuevaZelandaShape);
+  textSize(20);
+  fill(255);
+  text("NUEVA ZELANDA", 623.38, 1639.6);
+  // Fiyi
+  shape(fiyiShape);
+  textSize(20);
+  fill(255);
+  text("FIYI", 1023.98, 1639.6);
+  // Papúa Nueva Guinea
+  shape(papuaNuevaGuineaShape);
+  textSize(20);
+  fill(255);
+  text("PAPÚA NUEVA GUINEA", 1424.54, 1639.6);
+  // Tonga
+  shape(tongaShape);
+  textSize(20);
+  fill(255);
+  text("TONGA", 1825.1, 1639.6);
+  // Kiribati
+  shape(kiribatiShape);
+  textSize(20);
+  fill(255);
+  text("KIRIBATI", 2225.66, 1639.6);
+  // Tuvalu
+  shape(tuvaluShape);
+  textSize(20);
+  fill(255);
+  text("TUVALU", 2626.24, 1639.6);
 }
