@@ -379,10 +379,17 @@ void setup() {
 
 
   // Escena continentes
+  // África
   africaTituloImage = loadImage("africaTitulo.png");
   noStroke();
   africaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
   africaTituloShape.setTexture(africaTituloImage);
+
+  // Europa
+  europaTituloImage = loadImage("europaTitulo.png");
+  noStroke();
+  europaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
+  europaTituloShape.setTexture(europaTituloImage);
 }
 
 boolean mouseOverSolar() {
@@ -402,7 +409,7 @@ void draw() {
 
   switch (estadoActual) {
   case MENU:
-    escenaAfrica();
+    escenaMenu();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();

@@ -1,6 +1,12 @@
 // Escenas de los continentes
+// Africa título
 PImage africaTituloImage;
 PShape africaTituloShape;
+
+// Europa título
+PImage europaTituloImage;
+PShape europaTituloShape;
+
 
 // Escena del continente africano
 void escenaAfrica() {
@@ -100,9 +106,102 @@ void escenaAfrica() {
 }
 
 // Europa
-/*
+// Escena del continente europeo
+void escenaEuropa() {
 
- */
+  // Sin cursor
+  noCursor();
+  translate(0, -mouseY * 0.6);
+
+  // Fondo de la pantalla en esta escena
+  background(0);
+
+  pushMatrix();
+  translate(0, 0, -500);
+  for (int counter = 0; counter < amount_estrellas; counter++) {
+    fill(255);
+    ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
+  }
+  popMatrix();
+
+  // Edición del estilo del fondo de la escena
+  shapeMode(CENTER);
+
+  strokeWeight(2.5);
+  stroke(180);
+  fill(255, 255, 240);
+  rect(width / 6, 0, width / 1.5, height / 0.5);
+
+  noStroke();
+  fill(245, 245, 220);
+  ellipse(width / 2, -50, 1000, 1000);
+
+  shape(europaTituloShape);
+
+  // Información
+  textAlign(LEFT);
+
+  String europaTit1 = "";
+  textSize(35);
+  fill(50);
+  text(europaTit1, 410, 500, width - 410, 500);
+  String europaInf11 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf11, 410, 555, width - 785, 555);
+  String europaInf12 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf12, 410, 645, width - 785, 645);
+  String europaInf13 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf13, 410, 730, width - 785, 730);
+
+  String europaTit2 = "";
+  textSize(35);
+  fill(50);
+  text(europaTit2, 410, 850, width - 850, 500);
+  String europaInf21 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf21, 410, 905, width - 785, 905);
+  String europaInf22 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf22, 410, 1020, width - 785, 1020);
+  String europaInf23 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf23, 410, 1105, width - 785, 1105);
+
+  String europaTit3 = "";
+  textSize(35);
+  fill(50);
+  text(europaTit3, 410, 1225, width - 850, 1225);
+  String europaInf31 =  "";
+  textSize(20);
+  fill(50);
+  text(europaInf31, 410, 1280, width - 785, 1280);
+  String europaInf32 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf32, 410, 1395, width - 785, 1395);
+
+  String europaTit4 = "";
+  textSize(35);
+  fill(50);
+  text(europaTit4, 410, 1515, width - 850, 1515);
+  String europaInf41 = "";
+  textSize(20);
+  fill(50);
+  text(europaInf41, 410, 1570, width - 785, 1570);
+
+  String europaFuente = "Fuente: https://humanidades.com/europa/";
+  textSize(15);
+  fill(50);
+  text(europaFuente, 410, 1695, width - 785, 1695);
+}
 
 // América
 /*

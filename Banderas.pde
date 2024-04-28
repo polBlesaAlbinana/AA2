@@ -126,7 +126,7 @@ PShape tuvaluShape;
 
 void escenaBanderas() {
 
-  noCursor();
+  cursor(CROSS);
 
   translate(-mouseX * 0.5, -mouseY * 0.55);
 
