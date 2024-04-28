@@ -51,6 +51,30 @@ PImage italiaFlag;
 PShape italiaShape;
 
 
+// América
+// USA
+PImage usaFlag;
+PShape usaShape;
+// Perú
+PImage peruFlag;
+PShape peruShape;
+// Cuba
+PImage cubaFlag;
+PShape cubaShape;
+// Argentina
+PImage argentinaFlag;
+PShape argentinaShape;
+// México
+PImage mexicoFlag;
+PShape mexicoShape;
+// Brasil
+PImage brasilFlag;
+PShape brasilShape;
+// Honduras
+PImage hondurasFlag;
+PShape hondurasShape;
+
+
 
 void escenaBanderas() {
 
@@ -172,4 +196,42 @@ void escenaBanderas() {
   textSize(20);
   fill(255);
   text("ITALIA", 2626.24, 646.6);
+
+ // América
+  // USA
+  shape(usaShape);
+  textSize(20);
+  fill(255);
+  text("USA", 222.78, 977.6);
+  // Perú
+  shape(peruShape);
+  textSize(20);
+  fill(255);
+  text("PERÚ", 623.38, 977.6);
+  // Cuba
+  shape(cubaShape);
+  textSize(20);
+  fill(255);
+  text("CUBA", 1023.98, 977.6);
+  // Argentina
+  shape(argentinaShape);
+  textSize(20);
+  fill(255);
+  text("ARGENTINA", 1424.54, 977.6);
+  // México
+  shape(mexicoShape);
+  textSize(20);
+  fill(255);
+  text("MÉXICO", 1825.1, 977.6);
+  // Brasil
+  shape(brasilShape);
+  textSize(20);
+  fill(255);
+  text("BRASIL", 2225.66, 977.6);
+  // Honduras
+  shape(hondurasShape);
+  textSize(20);
+  fill(255);
+  text("HONDURAS", 2626.24, 977.6);
+
 }

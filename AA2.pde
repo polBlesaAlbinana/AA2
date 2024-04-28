@@ -200,7 +200,7 @@ void setup() {
   stroke(255);
   madagascarShape = createShape(RECT, 2448.44, 100, banderasX, banderasY);
   madagascarShape.setTexture(madagascarFlag);
-  
+
   // Europa
   // Inglaterra
   inglaterraFlag = loadImage("Inglaterra.png");
@@ -245,6 +245,49 @@ void setup() {
   italiaShape = createShape(RECT, 2448.44, 431, banderasX, banderasY);
   italiaShape.setTexture(italiaFlag);
 
+  // América
+  // USA
+  usaFlag = loadImage("USA.png");
+  strokeWeight(1.5);
+  stroke(255);
+  usaShape = createShape(RECT, 45, 762, banderasX, banderasY);
+  usaShape.setTexture(usaFlag);
+  // Perú
+  peruFlag = loadImage("Perú.png");
+  strokeWeight(1.5);
+  stroke(255);
+  peruShape = createShape(RECT, 445.6, 762, banderasX, banderasY);
+  peruShape.setTexture(peruFlag);
+  // Cuba
+  cubaFlag = loadImage("Cuba.png");
+  strokeWeight(1.5);
+  stroke(255);
+  cubaShape = createShape(RECT, 846.2, 762, banderasX, banderasY);
+  cubaShape.setTexture(cubaFlag);
+  // Argentina
+  argentinaFlag = loadImage("Argentina.png");
+  strokeWeight(1.5);
+  stroke(255);
+  argentinaShape = createShape(RECT, 1246.76, 762, banderasX, banderasY);
+  argentinaShape.setTexture(argentinaFlag);
+  // México
+  mexicoFlag = loadImage("México.png");
+  strokeWeight(1.5);
+  stroke(255);
+  mexicoShape = createShape(RECT, 1647.32, 762, banderasX, banderasY);
+  mexicoShape.setTexture(mexicoFlag);
+  // Brasil
+  brasilFlag = loadImage("Brasil.png");
+  strokeWeight(1.5);
+  stroke(255);
+  brasilShape = createShape(RECT, 2047.88, 762, banderasX, banderasY);
+  brasilShape.setTexture(brasilFlag);
+  // Honduras
+  hondurasFlag = loadImage("Honduras.png");
+  strokeWeight(1.5);
+  stroke(255);
+  hondurasShape = createShape(RECT, 2448.44, 762, banderasX, banderasY);
+  hondurasShape.setTexture(hondurasFlag);
 }
 
 boolean mouseOverSolar() {
