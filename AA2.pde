@@ -54,14 +54,14 @@ void setup() {
   esferaTierraMenu.setTexture(TierraMenu);
 
   // Imagen de la opción del Sistema Solar en el menú principal
-
   sistemaSolar = loadImage("SistemaSolar.png");
-
   sistemaSolarBlack = loadImage("SistemaSolarMouse.png");
+
   // Imagen Continentes
   continentes = loadImage("Continentes.png");
   continentesBlack = loadImage("ContinentesBlack.png");
   africa = loadImage("africa.png");
+
 
   // Escena del Sistema Solar
   // Imagen y creación del Sol
@@ -376,6 +376,13 @@ void setup() {
   stroke(255);
   tuvaluShape = createShape(RECT, 2448.44, 1424, banderasX, banderasY);
   tuvaluShape.setTexture(tuvaluFlag);
+
+
+  // Escena continentes
+  africaTituloImage = loadImage("africaTitulo.png");
+  noStroke();
+  africaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
+  africaTituloShape.setTexture(africaTituloImage);
 }
 
 boolean mouseOverSolar() {
@@ -395,7 +402,7 @@ void draw() {
 
   switch (estadoActual) {
   case MENU:
-    escenaBanderas();
+    escenaAfrica();
     break;
   case SISTEMA_SOLAR:
     escenaSistemaSolar();
@@ -430,8 +437,6 @@ void draw() {
   }
 }
 
-void mouseMoved() {
-}
 
 void escenaRecetas() {
   println("Escena de recetas mostrada"); // Depuración para verificar la escena
@@ -636,41 +641,6 @@ void mousePressed() {
   }
 }
 
-void keyPressed() {
-  if (estadoActual == EstadoPantalla.SISTEMA_SOLAR) {
-    switch(key) {
-    case 0:
-
-      break;
-    case 1:
-
-      break;
-    case 2:
-
-      break;
-    case 3:
-
-      break;
-    case 4:
-
-      break;
-    case 5:
-
-      break;
-    case 6:
-
-      break;
-    case 7:
-
-      break;
-    case 8:
-
-      break;
-    default:
-      break;
-    }
-  }
-}
 
 void escenaInjera() {
   background(245, 245, 220); // Fondo suave
