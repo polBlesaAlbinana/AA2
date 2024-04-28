@@ -75,6 +75,30 @@ PImage hondurasFlag;
 PShape hondurasShape;
 
 
+// Asia
+// Japón
+PImage japonFlag;
+PShape japonShape;
+// Indonesia
+PImage indonesiaFlag;
+PShape indonesiaShape;
+// India
+PImage indiaFlag;
+PShape indiaShape;
+// Vietnam
+PImage vietnamFlag;
+PShape vietnamShape;
+// China
+PImage chinaFlag;
+PShape chinaShape;
+// Israel
+PImage israelFlag;
+PShape israelShape;
+// Cambodja
+PImage cambodjaFlag;
+PShape cambodjaShape;
+
+
 
 void escenaBanderas() {
 
@@ -94,7 +118,7 @@ void escenaBanderas() {
   textAlign(LEFT, CENTER);
   textSize(20);
   fill(255);
-  text("PAISES MÁS RECONOCIDOS DEL MUNDO", 10, 10);
+  text("PAÍSES ALREDEDOR DEL MUNDO", 10, 10);
 
   // Nombre de los continentes
   // África
@@ -197,7 +221,7 @@ void escenaBanderas() {
   fill(255);
   text("ITALIA", 2626.24, 646.6);
 
- // América
+  // América
   // USA
   shape(usaShape);
   textSize(20);
@@ -234,4 +258,40 @@ void escenaBanderas() {
   fill(255);
   text("HONDURAS", 2626.24, 977.6);
 
+  // Asia
+  // Japón
+  shape(japonShape);
+  textSize(20);
+  fill(255);
+  text("JAPÓN", 222.78, 1308.6);
+  // Indonesia
+  shape(indonesiaShape);
+  textSize(20);
+  fill(255);
+  text("INDONESIA", 623.38, 1308.6);
+  // India
+  shape(indiaShape);
+  textSize(20);
+  fill(255);
+  text("INDIA", 1023.98, 1308.6);
+  // Vietnam
+  shape(vietnamShape);
+  textSize(20);
+  fill(255);
+  text("VIETNAM", 1424.54, 1308.6);
+  // China
+  shape(chinaShape);
+  textSize(20);
+  fill(255);
+  text("CHINA", 1825.1, 1308.6);
+  // Israel
+  shape(israelShape);
+  textSize(20);
+  fill(255);
+  text("ISRAEL", 2225.66, 1308.6);
+  // Cambodja
+  shape(cambodjaShape);
+  textSize(20);
+  fill(255);
+  text("CAMBODJA", 2626.24, 1308.6);
 }

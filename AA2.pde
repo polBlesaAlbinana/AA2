@@ -288,6 +288,50 @@ void setup() {
   stroke(255);
   hondurasShape = createShape(RECT, 2448.44, 762, banderasX, banderasY);
   hondurasShape.setTexture(hondurasFlag);
+  
+   // Asia
+  // Japón
+  japonFlag = loadImage("Japón.png");
+  strokeWeight(1.5);
+  stroke(255);
+  japonShape = createShape(RECT, 45, 1093, banderasX, banderasY);
+  japonShape.setTexture(japonFlag);
+  // Indonesia
+  indonesiaFlag = loadImage("Indonesia.png");
+  strokeWeight(1.5);
+  stroke(255);
+  indonesiaShape = createShape(RECT, 445.6, 1093, banderasX, banderasY);
+  indonesiaShape.setTexture(indonesiaFlag);
+  // India
+  indiaFlag = loadImage("India.png");
+  strokeWeight(1.5);
+  stroke(255);
+  indiaShape = createShape(RECT, 846.2, 1093, banderasX, banderasY);
+  indiaShape.setTexture(indiaFlag);
+  // Vietnam
+  vietnamFlag = loadImage("Vietnam.png");
+  strokeWeight(1.5);
+  stroke(255);
+  vietnamShape = createShape(RECT, 1246.76, 1093, banderasX, banderasY);
+  vietnamShape.setTexture(vietnamFlag);
+  // China
+  chinaFlag = loadImage("China.png");
+  strokeWeight(1.5);
+  stroke(255);
+  chinaShape = createShape(RECT, 1647.32, 1093, banderasX, banderasY);
+  chinaShape.setTexture(chinaFlag);
+  // Israel
+  israelFlag = loadImage("Israel.png");
+  strokeWeight(1.5);
+  stroke(255);
+  israelShape = createShape(RECT, 2047.88, 1093, banderasX, banderasY);
+  israelShape.setTexture(israelFlag);
+  // Cambodja
+  cambodjaFlag = loadImage("Cambodja.png");
+  strokeWeight(1.5);
+  stroke(255);
+  cambodjaShape = createShape(RECT, 2448.44, 1093, banderasX, banderasY);
+  cambodjaShape.setTexture(cambodjaFlag);
 }
 
 boolean mouseOverSolar() {
