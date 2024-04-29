@@ -390,6 +390,24 @@ void setup() {
   noStroke();
   europaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
   europaTituloShape.setTexture(europaTituloImage);
+
+  // América
+  americaTituloImage = loadImage("americaTitulo.png");
+  noStroke();
+  americaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
+  americaTituloShape.setTexture(americaTituloImage);
+
+  // Asia
+  asiaTituloImage = loadImage("asiaTitulo.png");
+  noStroke();
+  asiaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
+  asiaTituloShape.setTexture(asiaTituloImage);
+
+  // Oceanía
+  oceaniaTituloImage = loadImage("oceaniaTitulo.png");
+  noStroke();
+  oceaniaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
+  oceaniaTituloShape.setTexture(oceaniaTituloImage);
 }
 
 boolean mouseOverSolar() {

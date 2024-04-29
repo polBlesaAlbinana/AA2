@@ -7,6 +7,18 @@ PShape africaTituloShape;
 PImage europaTituloImage;
 PShape europaTituloShape;
 
+// América título
+PImage americaTituloImage;
+PShape americaTituloShape;
+
+// Asia título
+PImage asiaTituloImage;
+PShape asiaTituloShape;
+
+// Oceanía título
+PImage oceaniaTituloImage;
+PShape oceaniaTituloShape;
+
 
 // Escena del continente africano
 void escenaAfrica() {
@@ -204,16 +216,295 @@ void escenaEuropa() {
 }
 
 // América
-/*
+// Escena del continente americano
+void escenaAmerica() {
 
- */
+  // Sin cursor
+  noCursor();
+  translate(0, -mouseY * 0.6);
+
+  // Fondo de la pantalla en esta escena
+  background(0);
+
+  pushMatrix();
+  translate(0, 0, -500);
+  for (int counter = 0; counter < amount_estrellas; counter++) {
+    fill(255);
+    ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
+  }
+  popMatrix();
+
+  // Edición del estilo del fondo de la escena
+  shapeMode(CENTER);
+
+  strokeWeight(2.5);
+  stroke(180);
+  fill(255, 255, 240);
+  rect(width / 6, 0, width / 1.5, height / 0.5);
+
+  noStroke();
+  fill(245, 245, 220);
+  ellipse(width / 2, -50, 1000, 1000);
+
+  shape(americaTituloShape);
+
+  // Información
+  textAlign(LEFT);
+
+  String americaTit1 = "";
+  textSize(35);
+  fill(50);
+  text(americaTit1, 410, 500, width - 410, 500);
+  String americaInf11 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf11, 410, 555, width - 785, 555);
+  String americaInf12 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf12, 410, 645, width - 785, 645);
+  String americaInf13 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf13, 410, 730, width - 785, 730);
+
+  String americaTit2 = "";
+  textSize(35);
+  fill(50);
+  text(americaTit2, 410, 850, width - 850, 500);
+  String americaInf21 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf21, 410, 905, width - 785, 905);
+  String americaInf22 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf22, 410, 1020, width - 785, 1020);
+  String americaInf23 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf23, 410, 1105, width - 785, 1105);
+
+  String americaTit3 = "";
+  textSize(35);
+  fill(50);
+  text(americaTit3, 410, 1225, width - 850, 1225);
+  String americaInf31 =  "";
+  textSize(20);
+  fill(50);
+  text(americaInf31, 410, 1280, width - 785, 1280);
+  String americaInf32 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf32, 410, 1395, width - 785, 1395);
+
+  String americaTit4 = "";
+  textSize(35);
+  fill(50);
+  text(americaTit4, 410, 1515, width - 850, 1515);
+  String americaInf41 = "";
+  textSize(20);
+  fill(50);
+  text(americaInf41, 410, 1570, width - 785, 1570);
+
+  String americaFuente = "Fuente: https://humanidades.com/america/";
+  textSize(15);
+  fill(50);
+  text(americaFuente, 410, 1695, width - 785, 1695);
+}
 
 // Asia
-/*
+// Escena del continente asiático
+void escenaAsia() {
 
- */
+  // Sin cursor
+  noCursor();
+  translate(0, -mouseY * 0.6);
+
+  // Fondo de la pantalla en esta escena
+  background(0);
+
+  pushMatrix();
+  translate(0, 0, -500);
+  for (int counter = 0; counter < amount_estrellas; counter++) {
+    fill(255);
+    ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
+  }
+  popMatrix();
+
+  // Edición del estilo del fondo de la escena
+  shapeMode(CENTER);
+
+  strokeWeight(2.5);
+  stroke(180);
+  fill(255, 255, 240);
+  rect(width / 6, 0, width / 1.5, height / 0.5);
+
+  noStroke();
+  fill(245, 245, 220);
+  ellipse(width / 2, -50, 1000, 1000);
+
+  shape(asiaTituloShape);
+
+  // Información
+  textAlign(LEFT);
+
+  String asiaTit1 = "";
+  textSize(35);
+  fill(50);
+  text(asiaTit1, 410, 500, width - 410, 500);
+  String asiaInf11 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf11, 410, 555, width - 785, 555);
+  String asiaInf12 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf12, 410, 645, width - 785, 645);
+  String asiaInf13 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf13, 410, 730, width - 785, 730);
+
+  String asiaTit2 = "";
+  textSize(35);
+  fill(50);
+  text(asiaTit2, 410, 850, width - 850, 500);
+  String asiaInf21 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf21, 410, 905, width - 785, 905);
+  String asiaInf22 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf22, 410, 1020, width - 785, 1020);
+  String asiaInf23 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf23, 410, 1105, width - 785, 1105);
+
+  String asiaTit3 = "";
+  textSize(35);
+  fill(50);
+  text(asiaTit3, 410, 1225, width - 850, 1225);
+  String asiaInf31 =  "";
+  textSize(20);
+  fill(50);
+  text(asiaInf31, 410, 1280, width - 785, 1280);
+  String asiaInf32 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf32, 410, 1395, width - 785, 1395);
+
+  String asiaTit4 = "";
+  textSize(35);
+  fill(50);
+  text(asiaTit4, 410, 1515, width - 850, 1515);
+  String asiaInf41 = "";
+  textSize(20);
+  fill(50);
+  text(asiaInf41, 410, 1570, width - 785, 1570);
+
+  String asiaFuente = "Fuente: https://humanidades.com/asia/";
+  textSize(15);
+  fill(50);
+  text(asiaFuente, 410, 1695, width - 785, 1695);
+}
 
 // Oceania
-/*
+// Escena del continente oaceánico
+void escenaOceania() {
 
- */
+  // Sin cursor
+  noCursor();
+  translate(0, -mouseY * 0.6);
+
+  // Fondo de la pantalla en esta escena
+  background(0);
+
+  pushMatrix();
+  translate(0, 0, -500);
+  for (int counter = 0; counter < amount_estrellas; counter++) {
+    fill(255);
+    ellipse(estrellas_x[counter], estrellas_y[counter], radius_estrellas, radius_estrellas);
+  }
+  popMatrix();
+
+  // Edición del estilo del fondo de la escena
+  shapeMode(CENTER);
+
+  strokeWeight(2.5);
+  stroke(180);
+  fill(255, 255, 240);
+  rect(width / 6, 0, width / 1.5, height / 0.5);
+
+  noStroke();
+  fill(245, 245, 220);
+  ellipse(width / 2, -50, 1000, 1000);
+
+  shape(oceaniaTituloShape);
+
+  // Información
+  textAlign(LEFT);
+
+  String oceaniaTit1 = "";
+  textSize(35);
+  fill(50);
+  text(oceaniaTit1, 410, 500, width - 410, 500);
+  String oceaniaInf11 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf11, 410, 555, width - 785, 555);
+  String oceaniaInf12 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf12, 410, 645, width - 785, 645);
+  String oceaniaInf13 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf13, 410, 730, width - 785, 730);
+
+  String oceaniaTit2 = "";
+  textSize(35);
+  fill(50);
+  text(oceaniaTit2, 410, 850, width - 850, 500);
+  String oceaniaInf21 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf21, 410, 905, width - 785, 905);
+  String oceaniaInf22 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf22, 410, 1020, width - 785, 1020);
+  String oceaniaInf23 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf23, 410, 1105, width - 785, 1105);
+
+  String oceaniaTit3 = "";
+  textSize(35);
+  fill(50);
+  text(oceaniaTit3, 410, 1225, width - 850, 1225);
+  String oceaniaInf31 =  "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf31, 410, 1280, width - 785, 1280);
+  String oceaniaInf32 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf32, 410, 1395, width - 785, 1395);
+
+  String oceaniaTit4 = "";
+  textSize(35);
+  fill(50);
+  text(oceaniaTit4, 410, 1515, width - 850, 1515);
+  String oceaniaInf41 = "";
+  textSize(20);
+  fill(50);
+  text(oceaniaInf41, 410, 1570, width - 785, 1570);
+
+  String oceaniaFuente = "Fuente: https://humanidades.com/oceania/";
+  textSize(15);
+  fill(50);
+  text(oceaniaFuente, 410, 1695, width - 785, 1695);
+}
