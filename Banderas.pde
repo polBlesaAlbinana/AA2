@@ -1,3 +1,34 @@
+// Agregamos el ancho y alto de cada botón para detección de clic
+int ancho = 200;  // Estimación del ancho para cada botón
+int alto = 50;    // Estimación del alto para cada botón
+
+// Actualizamos `verificarHover` para tener un ancho dinámico
+void verificarHover(String texto, float posX, float posY) {
+  float textWidth = textWidth(texto);
+  float top = posY - textSize / 2;
+  float bottom = posY + textSize / 2;
+
+  // Verifica si el cursor está sobre el área del texto
+  if (mouseX >= posX && mouseX <= posX + textWidth &&
+      mouseY >= top && mouseY <= bottom) {
+    fill(0, 255, 0);  // Cambia a verde si el mouse está sobre el texto
+  } else {
+    fill(255, 0, 0);  // Color rojo por defecto
+  }
+
+  text(texto, posX, posY);  // Dibuja el texto
+}
+
+
+// Arrays para almacenar información de los botones
+String[] nombres = {"ÁFRICA", "EUROPA", "AMÉRICA", "ASIA", "OCEANÍA"};
+int[] posX = {400, 700, 1000, 1300, 1600};  // Posiciones X de cada botón
+int posY = 10;  // Posición Y común para todos los botones
+int textSize = 35;  // Tamaño del texto
+
+// Para saber cuál botón fue clickeado
+int botonSeleccionado = -1;
+
 // Escena Banderas
 float banderasX = 355.56;
 float banderasY = 200.0;
@@ -127,17 +158,14 @@ PShape tuvaluShape;
 void escenaBanderas() {
 
   cursor(CROSS);
-  // Nombre de los continentes
-  // África
   textAlign(LEFT, CENTER);
-  textSize(35);  // Tamaño de fuente para todos los textos
+  textSize(textSize);
 
-  // Verifica la posición del cursor para cada texto
-  verificarHover("ÁFRICA", 400, 10);
-  verificarHover("EUROPA", 700, 10);
-  verificarHover("AMÉRICA", 1000, 10);
-  verificarHover("ASIA", 1300, 10);
-  verificarHover("OCEANÍA", 1600, 10);
+  // Dibuja y verifica el hover para cada continente
+  for (int i = 0; i < nombres.length; i++) {
+    verificarHover(nombres[i], posX[i], posY);
+  }
+  
   translate(-mouseX * 0.5, -mouseY * 0.55);
 
   pushMatrix();
@@ -156,26 +184,26 @@ void escenaBanderas() {
 
   // Nombre de los continentes
   // África
-  textAlign (LEFT, CENTER);
-  textSize(35);
-  fill(59, 131, 189);
-  text("África", 40, 60);
-  // Europa
-  textSize(35);
-  fill(59, 131, 189);
-  text("Europa", 40, 384);
-  // América
-  textSize(35);
-  fill(59, 131, 189);
-  text("América", 40, 713);
-  //Asia
-  textSize(35);
-  fill(59, 131, 189);
-  text("Asia", 40, 1037);
-  // Oceanía
-  textSize(35);
-  fill(59, 131, 189);
-  text("Oceanía", 40, 1371);
+  //textAlign (LEFT, CENTER);
+  //textSize(35);
+  //fill(59, 131, 189);
+  //text("África", 40, 60);
+  //// Europa
+  //textSize(35);
+  //fill(59, 131, 189);
+  //text("Europa", 40, 384);
+  //// América
+  //textSize(35);
+  //fill(59, 131, 189);
+  //text("América", 40, 713);
+  ////Asia
+  //textSize(35);
+  //fill(59, 131, 189);
+  //text("Asia", 40, 1037);
+  //// Oceanía
+  //textSize(35);
+  //fill(59, 131, 189);
+  //text("Oceanía", 40, 1371);
 
   // Continentes y sus paises
   rectMode(CENTER);
@@ -365,4 +393,5 @@ void escenaBanderas() {
   textSize(20);
   fill(255);
   text("TUVALU", 2626.24, 1639.6);
+
 }

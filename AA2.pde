@@ -7,7 +7,7 @@
 //EstadoPantalla estadoActual;
 // Definición de la enumeración para las escenas
 enum EstadoPantalla {
-  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS
+  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS, AFRICA, EUROPA, ASIA, OCEANIA, AMERICA
 }
 
 // Variable para el estado estadoActual de la pantalla
@@ -421,24 +421,24 @@ boolean mouseOverContinentes() {
 }
 
 
-void verificarHover(String texto, float posX, float posY) {
-  int textSize = 35;  // Asegúrate de que el tamaño de la fuente coincida con el usado en draw
-  float textWidth = textWidth(texto);  // Ancho del texto
-  
-  // Calcular los límites del área de detección
-  float top = posY - textSize / 2;  // Parte superior del área
-  float bottom = posY + textSize / 2;  // Parte inferior del área
-  
-  // Comprueba si el cursor está sobre el área del texto
-  if (mouseX >= posX && mouseX <= posX + textWidth &&
-      mouseY >= top && mouseY <= bottom) {  // Comprueba si el cursor está dentro del área
-    fill(0, 255, 0);  // Cambia a color verde cuando el cursor está encima
-  } else {
-    fill(255, 0, 0);  // Color rojo cuando el cursor no está encima
-  }
+//void verificarHover(String texto, float posX, float posY) {
+//  int textSize = 35;  // Asegúrate de que el tamaño de la fuente coincida con el usado en draw
+//  float textWidth = textWidth(texto);  // Ancho del texto
 
-  text(texto, posX, posY);  // Dibuja el texto
-}
+//  // Calcular los límites del área de detección
+//  float top = posY - textSize / 2;  // Parte superior del área
+//  float bottom = posY + textSize / 2;  // Parte inferior del área
+
+//  // Comprueba si el cursor está sobre el área del texto
+//  if (mouseX >= posX && mouseX <= posX + textWidth &&
+//      mouseY >= top && mouseY <= bottom) {  // Comprueba si el cursor está dentro del área
+//    fill(0, 255, 0);  // Cambia a color verde cuando el cursor está encima
+//  } else {
+//    fill(255, 0, 0);  // Color rojo cuando el cursor no está encima
+//  }
+
+//  text(texto, posX, posY);  // Dibuja el texto
+//}
 void draw() {
 
   background(0);
@@ -476,6 +476,21 @@ void draw() {
     break;
   case AREPAS:
     escenaArepas();
+    break;
+  case AFRICA:
+    escenaAfrica();
+    break;
+  case EUROPA:
+    escenaEuropa();
+    break;
+  case ASIA:
+    escenaAsia();
+    break;
+  case OCEANIA:
+    escenaOceania();
+    break;
+  case AMERICA:
+    escenaAmerica();
     break;
   }
 }
@@ -680,6 +695,31 @@ void mousePressed() {
           println("Clic en Receta 5: Arroz Chaufa");
           break;
         }
+      }
+    }
+  } else if (estadoActual == EstadoPantalla.BANDERAS) {
+    for (int i = 0; i < nombres.length; i++) {
+      if (mouseX >= posX[i] && mouseX <= posX[i] + ancho &&
+        mouseY >= (posY - alto / 2) && mouseY <= (posY + alto / 2)) {
+        // Cambiar a la escena correspondiente
+        switch (i) {
+        case 0:
+          estadoActual = EstadoPantalla.AFRICA;
+          break;
+        case 1:
+          estadoActual = EstadoPantalla.EUROPA;
+          break;
+        case 2:
+          estadoActual = EstadoPantalla.AMERICA;
+          break;
+        case 3:
+          estadoActual = EstadoPantalla.ASIA;
+          break;
+        case 4:
+          estadoActual = EstadoPantalla.OCEANIA;
+          break;
+        }
+        break;  // Salir del bucle para evitar múltiples detecciones
       }
     }
   }
