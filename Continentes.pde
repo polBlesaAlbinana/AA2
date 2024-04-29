@@ -476,11 +476,11 @@ void escenaOceania() {
   String oceaniaInf22 = "Nueva Zelanda y las islas de Micronesia, Melanesia y Polinesia, que se encuentran en latitudes más australes, tienen un clima más templado y lluvioso. ";
   textSize(20);
   fill(50);
-  text(oceaniaInf22, width / 2, 1540, 1150, width / 1.75);
+  text(oceaniaInf22, width / 2, 1510, 1150, width / 1.75);
   String oceaniaInf23 = "Las condiciones climáticas determinan las características hidrológicas de Oceanía. No existen en el continente grandes cursos de agua. El más extenso es el río Murray, en Australia, con unos 2500 kilómetros de extensión. En las zonas montañosas y volcánicas los ríos tienen mucha pendiente y velocidad y son utilizados para producir energía hidroeléctrica. En las pequeñas islas del Pacífico la pequeña superficie no permite el desarrollo de grandes cursos de agua. ";
   textSize(20);
   fill(50);
-  text(oceaniaInf23, width / 2, 1650, 1150, width / 1.75);
+  text(oceaniaInf23, width / 2, 1590, 1150, width / 1.75);
 
   String oceaniaTit3 = "CULTURA Y RELIGIÓN DE OCEANÍA";
   textSize(35);
@@ -493,7 +493,7 @@ void escenaOceania() {
   String oceaniaInf32 = "En cuanto a la religión, la mayoría de la población de Oceanía practica el cristianismo protestante. Esto se debe a que muchos países oceánicos fueron colonias inglesas y en Inglaterra la mayoría de la gente es de religión protestante. En segundo lugar, el cristianismo católico también está muy presente, y en mucha menor medida le siguen otras religiones como el islamismo, el budismo, el hinduismo y las religiones que profesan los pueblos originarios de Oceanía. ";
   textSize(20);
   fill(50);
-  text(oceaniaInf32, width / 2, 1890, 1150, width / 1.75);
+  text(oceaniaInf32, width / 2, 1820, 1150, width / 1.75);
 
   String oceaniaTit4 = "FLORA Y FAUNA DE OCEANÍA";
   textSize(35);
