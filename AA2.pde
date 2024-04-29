@@ -60,6 +60,9 @@ void setup() {
   // Imagen Continentes
   continentes = loadImage("Continentes.png");
   continentesBlack = loadImage("ContinentesBlack.png");
+  // Imagen Recetas
+  recetas = loadImage("Recetas.png");
+  recetasBlack = loadImage("RecetasBlack.png");
   africa = loadImage("africa.png");
 
 
@@ -420,6 +423,10 @@ boolean mouseOverContinentes() {
     mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50;
 }
 
+boolean mouseOverRecetas() {
+  return mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+    mouseY >= (height +150) / 2 && mouseY <= (height +150) / 2 -50 +100;
+}
 
 //void verificarHover(String texto, float posX, float posY) {
 //  int textSize = 35;  // Asegúrate de que el tamaño de la fuente coincida con el usado en draw
@@ -658,6 +665,9 @@ void mousePressed() {
     } else if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
       mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50) {
       estadoActual = EstadoPantalla.BANDERAS;
+    } else if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
+      mouseY >= (height +150) / 2 && mouseY <= (height +150) / 2 -50 +100) {
+      estadoActual = EstadoPantalla.RECETAS;
     }
   }
   // Si estamos en la escena de recetas

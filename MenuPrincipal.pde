@@ -21,6 +21,8 @@ PImage sistemaSolar;
 PImage sistemaSolarBlack;
 PImage continentes;
 PImage continentesBlack;
+PImage recetas;
+PImage recetasBlack;
 PImage africa;
 
 void escenaMenu() {
@@ -71,16 +73,22 @@ void escenaMenu() {
   translate(width / 2.0, height / 2.0);
   imageMode(CENTER);
 
- if (mouseOverContinentes() == false) {
+  if (mouseOverContinentes() == false) {
     image(continentes, 0, 0, 450, 100);
   } else {
     image(continentesBlack, 0, 0, 450, 100);
   }
-   
+
   if (mouseOverSolar() == false) {
     image(sistemaSolar, 0, -100, 450, 100);
   } else {
     image(sistemaSolarBlack, 0, -100, 450, 100);
+  }
+
+  if (mouseOverRecetas() == false) {
+    image(recetas, 0, 100, 450, 100);
+  } else {
+    image(recetasBlack, 0, 100, 450, 100);
   }
   popMatrix();
 
