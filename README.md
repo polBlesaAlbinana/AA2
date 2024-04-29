@@ -2,6 +2,10 @@
 
 Alfredo Ugarte y Pol Blesa.
 
+Al inicio del proyecto aparecen tres botones centrales y cada uno de ellos nos lleva a una escena diferente.
+Cuando accedamos a Continentes podremos acceder a otras acceder a otras escenas haciendo clic a cada nombre de los continentes.
+Y si accedemos a recetas podremos hacer clic en cada receta y ver como es la preparación.
+
 Este proyecto incluye almenos 4 temas trabajados en clase, estos temas son los siguientes:
 	Colisiones.
 	Transformaciones homogéneas.
