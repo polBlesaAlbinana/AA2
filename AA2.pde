@@ -421,6 +421,24 @@ boolean mouseOverContinentes() {
 }
 
 
+void verificarHover(String texto, float posX, float posY) {
+  int textSize = 35;  // Asegúrate de que el tamaño de la fuente coincida con el usado en draw
+  float textWidth = textWidth(texto);  // Ancho del texto
+  
+  // Calcular los límites del área de detección
+  float top = posY - textSize / 2;  // Parte superior del área
+  float bottom = posY + textSize / 2;  // Parte inferior del área
+  
+  // Comprueba si el cursor está sobre el área del texto
+  if (mouseX >= posX && mouseX <= posX + textWidth &&
+      mouseY >= top && mouseY <= bottom) {  // Comprueba si el cursor está dentro del área
+    fill(0, 255, 0);  // Cambia a color verde cuando el cursor está encima
+  } else {
+    fill(255, 0, 0);  // Color rojo cuando el cursor no está encima
+  }
+
+  text(texto, posX, posY);  // Dibuja el texto
+}
 void draw() {
 
   background(0);
@@ -615,6 +633,7 @@ void escenaEducacion() {
 //}
 
 void mousePressed() {
+
   // Si estamos en el menú
   if (estadoActual == EstadoPantalla.MENU) {
     // Detectar clics en los botones del menú
@@ -623,7 +642,7 @@ void mousePressed() {
       estadoActual = EstadoPantalla.SISTEMA_SOLAR;
     } else if (mouseX >= (width - 400) / 2 && mouseX <= (width - 400) / 2 + 400 &&
       mouseY >= (height - 50) / 2 && mouseY <= (height - 50) / 2 + 50) {
-      estadoActual = EstadoPantalla.RECETAS;
+      estadoActual = EstadoPantalla.BANDERAS;
     }
   }
   // Si estamos en la escena de recetas

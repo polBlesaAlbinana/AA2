@@ -127,7 +127,17 @@ PShape tuvaluShape;
 void escenaBanderas() {
 
   cursor(CROSS);
+  // Nombre de los continentes
+  // África
+  textAlign(LEFT, CENTER);
+  textSize(35);  // Tamaño de fuente para todos los textos
 
+  // Verifica la posición del cursor para cada texto
+  verificarHover("ÁFRICA", 400, 10);
+  verificarHover("EUROPA", 700, 10);
+  verificarHover("AMÉRICA", 1000, 10);
+  verificarHover("ASIA", 1300, 10);
+  verificarHover("OCEANÍA", 1600, 10);
   translate(-mouseX * 0.5, -mouseY * 0.55);
 
   pushMatrix();
@@ -148,23 +158,23 @@ void escenaBanderas() {
   // África
   textAlign (LEFT, CENTER);
   textSize(35);
-  fill(255, 0, 0);
+  fill(59, 131, 189);
   text("África", 40, 60);
   // Europa
   textSize(35);
-  fill(255, 0, 0);
+  fill(59, 131, 189);
   text("Europa", 40, 384);
   // América
   textSize(35);
-  fill(255, 0, 0);
+  fill(59, 131, 189);
   text("América", 40, 713);
   //Asia
   textSize(35);
-  fill(255, 0, 0);
+  fill(59, 131, 189);
   text("Asia", 40, 1037);
   // Oceanía
   textSize(35);
-  fill(255, 0, 0);
+  fill(59, 131, 189);
   text("Oceanía", 40, 1371);
 
   // Continentes y sus paises
@@ -318,7 +328,7 @@ void escenaBanderas() {
   textSize(20);
   fill(255);
   text("CAMBODJA", 2626.24, 1308.6);
-  
+
   // Oceanía
   // Australia
   shape(australiaShape);
