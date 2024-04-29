@@ -143,11 +143,11 @@ void escenaEuropa() {
   strokeWeight(2.5);
   stroke(180);
   fill(255, 255, 240);
-  rect(width / 6, 0, width / 1.5, height / 0.5);
+  rect(width / 2, 0, width / 1.5, height / 0.3);
 
   noStroke();
   fill(245, 245, 220);
-  ellipse(width / 2, -50, 1000, 1000);
+  ellipse(width / 2, -100, 1000, 1000);
 
   shape(europaTituloShape);
 
@@ -157,63 +157,63 @@ void escenaEuropa() {
   String europaTit1 = "EXTENSIÓN, POBLACIÓN Y PAÍSES DE EUROPA";
   textSize(35);
   fill(50);
-  text(europaTit1, 410, 500, width - 410, 500);
+  text(europaTit1, width / 2, 995, 1150, width / 1.75);
   String europaInf11 = "Europa tiene una extensión de 10,18 millones de kilómetros cuadrados. Después de Oceanía, es el continente más pequeño del planeta. A pesar de su reducido tamaño en relación al resto, Europa es un continente densamente poblado, con más de 750 millones de personas. ";
   textSize(20);
   fill(50);
-  text(europaInf11, 410, 555, width - 785, 555);
+  text(europaInf11, width / 2, 1050, 1150, width / 1.75);
   String europaInf12 = "La población total del continente asciende a algo más de 740 millones de habitantes, lo que representa el 9,4 % del total mundial. Los países más poblados son Rusia con 143 millones de habitantes, Turquía con 84,7 millones y Alemania con 84,3 millones.";
   textSize(20);
   fill(50);
-  text(europaInf12, 410, 665, width - 785, 665);
+  text(europaInf12, width / 2, 1140, 1150, width / 1.75);
   String europaInf13 = "Europa está conformado por 47 países y otros Estados como Mónaco, San Marino o el Vaticano, que son territorios con estatus especiales reconocidos por la comunidad internacional. ";
   textSize(20);
   fill(50);
-  text(europaInf13, 410, 750, width - 785, 750);
+  text(europaInf13, width / 2, 1225, 1150, width / 1.75);
 
   String europaTit2 = "CARACTERÍSTICAS FÍSIO-NATURALES DE EUROPA";
   textSize(35);
   fill(50);
-  text(europaTit2, 410, 850, width - 850, 500);
+  text(europaTit2, width / 2, 1345, 1150, width / 1.75);
   String europaInf21 = "Desde el sur hacia el norte las temperaturas en el continente europeo tienden a reducirse. Europa incluye climas templados en las cercanías del mar Mediterráneo y climas fríos polares en el norte del continente. Las precipitaciones son abundantes en el centro y norte del continente, y tienden a disminuir hacia el sur por la influencia del clima mediterráneo, que se caracteriza por tener un verano muy cálido y muy seco. ";
   textSize(20);
   fill(50);
-  text(europaInf21, 410, 905, width - 785, 905);
+  text(europaInf21, width / 2, 1400, 1150, width / 1.75);
   String europaInf22 = "Como resultado de la gran variedad de relieves y del tipo de clima templado y lluvioso que predomina, el continente europeo presenta gran cantidad de ríos de distinto caudal y extensión. Los más largos de Europa son el Volga, con 3500 kilómetros de extensión, el Danubio, con 2850 kilómetros y el Ural con 2430 kilómetros. ";
   textSize(20);
   fill(50);
-  text(europaInf22, 410, 1050, width - 785, 1050);
+  text(europaInf22, width / 2, 1540, 1150, width / 1.75);
   String europaInf23 = "Otros ríos de menor extensión pero muy importantes para la historia y la economía europea son el Rin, el Elba, el Sena, el Támesis, el Po y el Ebro. ";
   textSize(20);
   fill(50);
-  text(europaInf23, 410, 1160, width - 785, 1160);
+  text(europaInf23, width / 2, 1650, 1150, width / 1.75);
 
   String europaTit3 = "CULTURA Y RELIGIÓN EN EUROPA";
   textSize(35);
   fill(50);
-  text(europaTit3, 410, 1225, width - 850, 1225);
+  text(europaTit3, width / 2, 1720, 1150, width / 1.75);
   String europaInf31 =  "El continente europeo es considerado la cuna de la civilización occidental, a partir de la cual se expandieron hacia el mundo valores y modelos políticos, culturales, sociales e ideológicos. Es un conjunto muy complejo de sociedades y Estados históricamente enfrentados por conflictos sociales, culturales y económicos, por lo que tienen una larga tradición de guerras y disputas territoriales. ";
   textSize(20);
   fill(50);
-  text(europaInf31, 410, 1280, width - 785, 1280);
+  text(europaInf31, width / 2, 1775, 1150, width / 1.75);
   String europaInf32 = "La religión predominante en Europa es el cristianismo. Las religiones cristianas más difundidas son la ortodoxa (principalmente en Rusia, Grecia y Ucrania), la protestante (en Gran Bretaña y parte de Alemania y Suiza) y la católica (en España, Italia, Portugal y el Vaticano, entre otros países). ";
   textSize(20);
   fill(50);
-  text(europaInf32, 410, 1395, width - 785, 1395);
+  text(europaInf32, width / 2, 1890, 1150, width / 1.75);
 
   String europaTit4 = "ACTIVIDADES ECONÓMICAS DE EUROPA";
   textSize(35);
   fill(50);
-  text(europaTit4, 410, 1515, width - 850, 1515);
+  text(europaTit4, width / 2, 2010, 1150, width / 1.75);
   String europaInf41 = "Europa es una de las regiones más desarrolladas del mundo, con una economía diversificada y altamente avanzada. Entre los países más desarrollados de Europa se encuentran Alemania, Francia, Reino Unido, Rusia, Italia y Países Bajos. ";
   textSize(20);
   fill(50);
-  text(europaInf41, 410, 1570, width - 785, 1570);
+  text(europaInf41, width / 2, 2065, 1150, width / 1.75);
 
   String europaFuente = "Fuente: https://humanidades.com/europa/";
   textSize(15);
   fill(50);
-  text(europaFuente, 410, 1695, width - 785, 1695);
+  text(europaFuente, width / 2, 2240, 1150, width / 1.75);
 }
 
 // América
@@ -241,11 +241,11 @@ void escenaAmerica() {
   strokeWeight(2.5);
   stroke(180);
   fill(255, 255, 240);
-  rect(width / 6, 0, width / 1.5, height / 0.5);
+  rect(width / 2, 0, width / 1.5, height / 0.3);
 
   noStroke();
   fill(245, 245, 220);
-  ellipse(width / 2, -50, 1000, 1000);
+  ellipse(width / 2, -100, 1000, 1000);
 
   shape(americaTituloShape);
 
@@ -339,11 +339,11 @@ void escenaAsia() {
   strokeWeight(2.5);
   stroke(180);
   fill(255, 255, 240);
-  rect(width / 6, 0, width / 1.5, height / 0.5);
+  rect(width / 2, 0, width / 1.5, height / 0.3);
 
   noStroke();
   fill(245, 245, 220);
-  ellipse(width / 2, -50, 1000, 1000);
+  ellipse(width / 2, -100, 1000, 1000);
 
   shape(asiaTituloShape);
 
@@ -437,11 +437,11 @@ void escenaOceania() {
   strokeWeight(2.5);
   stroke(180);
   fill(255, 255, 240);
-  rect(width / 6, 0, width / 1.5, height / 0.5);
+  rect(width / 2, 0, width / 1.5, height / 0.3);
 
   noStroke();
   fill(245, 245, 220);
-  ellipse(width / 2, -50, 1000, 1000);
+  ellipse(width / 2, -100, 1000, 1000);
 
   shape(oceaniaTituloShape);
 
