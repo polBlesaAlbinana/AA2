@@ -255,63 +255,63 @@ void escenaAmerica() {
   String americaTit1 = "EXTENSIÓN, POBLACIÓN Y PAÍSES DE AMÉRICA";
   textSize(35);
   fill(50);
-  text(americaTit1, 410, 500, width - 410, 500);
+  text(americaTit1, width / 2, 995, 1150, width / 1.75);
   String americaInf11 = "El continente americano posee una superficie de 43.316.000 km2, y se extiende desde los desiertos helados de Alaska y Groenlandia hasta el sur de la Patagonia, lo cual representa un 8,4 % de la superficie planetaria total y el 28,3% de la superficie continental absoluta. Limita en el norte con el océano Ártico, al este con el océano Atlántico, al oeste con el océano Pacífico y al sur con la Antártida.";
   textSize(20);
   fill(50);
-  text(americaInf11, 410, 555, width - 785, 555);
+  text(americaInf11, width / 2, 1055, 1150, width / 1.75);
   String americaInf12 = "Se divide, según sus características estructurales y geológicas, en dos grandes masas continentales de forma triangular unidas por una porción de tierra angosta y alargada. El sector norte recibe el nombre de América del Norte, el sector sur América del Sur, y el istmo que los une se llama América Central.";
   textSize(20);
   fill(50);
-  text(americaInf12, 410, 665, width - 785, 665);
+  text(americaInf12, width / 2, 1165, 1150, width / 1.75);
   String americaInf13 = "América está compuesta por 35 países independientes y por más de 20 territorios dependientes de otros países. La mayoría de esos territorios dependientes pertenecen políticamente a Francia, Inglaterra, Países Bajos y Estados Unidos. ";
   textSize(20);
   fill(50);
-  text(americaInf13, 410, 775, width - 785, 775);
+  text(americaInf13, width / 2, 1275, 1150, width / 1.75);
 
   String americaTit2 = "HISTORIA DE AMÉRICA";
   textSize(35);
   fill(50);
-  text(americaTit2, 410, 850, width - 850, 500);
+  text(americaTit2, width / 2, 1345, 1150, width / 1.75);
   String americaInf21 = "El periodo precolombino es el tiempo anterior a la llegada de los europeos, en el siglo XV. Durante este periodo, las culturas indígenas americanas se desarrollaron en diferentes regiones del continente: los aztecas y los mayas en América del Norte y América Central, los incas en los Andes y un gran número de pueblos nómades distribuidos por todo el continente.";
   textSize(20);
   fill(50);
-  text(americaInf21, 410, 905, width - 785, 905);
+  text(americaInf21, width / 2, 1400, 1150, width / 1.75);
   String americaInf22 = "El periodo coloniabl comenzó con la llegada de los europeos en el siglo XV y duró hasta principios del siglo XIX. Durante este tiempo, las potencias europeas colonizaron América e impusieron diferentes sistemas políticos, religiones y lenguas en todo el continente.";
   textSize(20);
   fill(50);
-  text(americaInf22, 410, 1020, width - 785, 1020);
+  text(americaInf22, width / 2, 1515, 1150, width / 1.75);
   String americaInf23 = "El periodo republicano comenzó en el siglo XIX, cuando los países americanos comenzaron a luchar por su independencia y formaron sus propias naciones. Durante este periodo los países americanos experimentaron una serie de cambios políticos, económicos y sociales como la abolición de la esclavitud, la lucha por la igualdad de derechos y la modernización económica.";
   textSize(20);
   fill(50);
-  text(americaInf23, 410, 1105, width - 785, 1105);
+  text(americaInf23, width / 2, 1600, 1150, width / 1.75);
 
   String americaTit3 = "CARACTERÍSTICAS FÍSIO-NATURALES DE AMÉRICA";
   textSize(35);
   fill(50);
-  text(americaTit3, 410, 1225, width - 850, 1225);
+  text(americaTit3, width / 2, 1720, 1150, width / 1.75);
   String americaInf31 =  "Debido a su extensa latitud y su gran superficie, América cuenta con una gran variedad de ambientes y climas. Existen climas fríos en los extremos norte y sur, templados en las zonas de latitudes medias y cálidos en las cercanías al ecuador y los trópicos. ";
   textSize(20);
   fill(50);
-  text(americaInf31, 410, 1280, width - 785, 1280);
+  text(americaInf31, width / 2, 1775, 1150, width / 1.75);
   String americaInf32 = "La cordillera de los Andes, que atraviesa al continente de norte a sur también condiciona las características climáticas, ya que la altura produce que las temperaturas desciendan. Por esa razón las zonas cordilleranas del continente americano también presentan climas fríos. ";
   textSize(20);
   fill(50);
-  text(americaInf32, 410, 1365, width - 785, 1365);
+  text(americaInf32, width / 2, 1855, 1150, width / 1.75);
 
   String americaTit4 = "ACTIVIDADES ECONÓMICAS DE AMÉRICA";
   textSize(35);
   fill(50);
-  text(americaTit4, 410, 1515, width - 850, 1515);
+  text(americaTit4, width / 2, 2010, 1150, width / 1.75);
   String americaInf41 = "El desarrollo económico entre los países americanos es muy desigual. Mientras que las actividades primarias predominan en la mayoría de los países latinoamericanos, en los países anglosajones, especialmente en Estados Unidos y Canadá, predominan actividades vinculadas a las actividades secundarias y terciarias, con gran influencia en los mercados mundiales. ";
   textSize(20);
   fill(50);
-  text(americaInf41, 410, 1570, width - 785, 1570);
+  text(americaInf41, width / 2, 2065, 1150, width / 1.75);
 
   String americaFuente = "Fuente: https://humanidades.com/america/";
   textSize(15);
   fill(50);
-  text(americaFuente, 410, 1695, width - 785, 1695);
+  text(americaFuente, width / 2, 2240, 1150, width / 1.75);
 }
 
 // Asia
