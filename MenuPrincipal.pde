@@ -92,26 +92,6 @@ void escenaMenu() {
   }
   popMatrix();
 
-  //// Dibuja los botones para "Recetas" y "Educación"
-  //pushMatrix();
-  //textAlign(CENTER, CENTER);
-
-  //// Botón para "Recetas"
-  //fill(200);
-  //stroke(0);
-  //rect(buttonX, buttonY1, buttonWidth, buttonHeight);
-  //fill(0);
-  //text("Recetas", buttonX + buttonWidth / 2, buttonY1 + buttonHeight / 2);
-
-  //// Botón para "Educación"
-  //fill(200);
-  //stroke(0);
-  //rect(buttonX, buttonY2, buttonWidth, buttonHeight);
-  //fill(0);
-  //text("Educación", buttonX + buttonWidth / 2, buttonY2 + buttonHeight / 2);
-
-  //popMatrix();
-
 
   // Creditos
   pushMatrix();
