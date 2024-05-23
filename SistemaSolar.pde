@@ -386,7 +386,7 @@ void escenaSistemaSolar() {
   }
 
   rotateX(radians(anguloDeInclinacionSaturno));
-  shape(esferaSaturnoInf);
+  shape(esferaSaturnoInf); 
   popMatrix();
 
   // Urano en el apartado informativo
@@ -555,6 +555,14 @@ void escenaSistemaSolar() {
   translate(saturnoSolRadio, 0.0, 0.0);
   rotateX(radians(anguloDeInclinacionSaturno));
   shape(esferaSaturno);
+
+  pushMatrix();
+  rotateX(radians(280));
+  rotateZ(radians(-100));
+  noStroke();
+  ellipse(0, 0, 600, 600);
+  popMatrix();
+
   popMatrix();
 
   // Urano

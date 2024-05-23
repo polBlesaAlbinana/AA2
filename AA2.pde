@@ -2,7 +2,7 @@
 
 // Definición de la enumeración para las escenas
 enum EstadoPantalla {
-  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS, AFRICA, EUROPA, ASIA, OCEANIA, AMERICA, MERCURIO
+  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS, AFRICA, EUROPA, ASIA, OCEANIA, AMERICA, MERCURIO, VENUS, LATIERRA, MARTE, JUPITER, SATURNO, URANO, NEPTUNO
 }
 
 // Variable para el estado estadoActual de la pantalla
@@ -408,13 +408,62 @@ void setup() {
   oceaniaTituloShape.setTexture(oceaniaTituloImage);
 
   // Escena planetas Sistema Solar
-  // Mercurio
 
+  // Mercurio
   MercurioPlaneta = loadImage("TexturaMercurio.jpg");
   noStroke();
   sphereDetail(100);
   esferaMercurioPlaneta = createShape(SPHERE, 1600);
   esferaMercurioPlaneta.setTexture(MercurioPlaneta);
+
+  // Venus
+  VenusPlaneta = loadImage("TexturaVenus.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaVenusPlaneta = createShape(SPHERE, 1600);
+  esferaVenusPlaneta.setTexture(VenusPlaneta);
+
+  // La Tierra
+  LaTierraPlaneta = loadImage("Tierra.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaLaTierraPlaneta = createShape(SPHERE, 1600);
+  esferaLaTierraPlaneta.setTexture(LaTierraPlaneta);
+
+  // Marte
+  MartePlaneta = loadImage("TexturaMarte.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaMartePlaneta = createShape(SPHERE, 1600);
+  esferaMartePlaneta.setTexture(MartePlaneta);
+
+  // Jupiter
+  JupiterPlaneta = loadImage("TexturaJupiter.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaJupiterPlaneta = createShape(SPHERE, 1600);
+  esferaJupiterPlaneta.setTexture(JupiterPlaneta);
+
+  // Saturno
+  SaturnoPlaneta = loadImage("TexturaSaturno.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaSaturnoPlaneta = createShape(SPHERE, 1600);
+  esferaSaturnoPlaneta.setTexture(SaturnoPlaneta);
+
+  // Urano
+  UranoPlaneta = loadImage("TexturaUrano.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaUranoPlaneta = createShape(SPHERE, 1600);
+  esferaUranoPlaneta.setTexture(UranoPlaneta);
+
+  // Neptuno
+  NeptunoPlaneta = loadImage("TexturaNeptuno.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaNeptunoPlaneta = createShape(SPHERE, 1600);
+  esferaNeptunoPlaneta.setTexture(NeptunoPlaneta);
 }
 
 boolean mouseOverSolar() {
@@ -499,6 +548,27 @@ void draw() {
     break;
   case MERCURIO:
     escenaMercurio();
+    break;
+  case VENUS:
+    escenaVenus();
+    break;
+  case LATIERRA:
+    escenaLaTierra();
+    break;
+  case MARTE:
+    escenaMarte();
+    break;
+  case JUPITER:
+    escenaJupiter();
+    break;
+  case SATURNO:
+    escenaSaturno();
+    break;
+  case URANO:
+    escenaUrano();
+    break;
+  case NEPTUNO:
+    escenaNeptuno();
     break;
   }
 }
