@@ -1,13 +1,8 @@
 //PRÁCTICA AA2: Alfredo Ugarte y Pol Blesa
 
-//enum EstadoPantalla {
-//  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, EDUCACION, CONTINENTES
-//}
-
-//EstadoPantalla estadoActual;
 // Definición de la enumeración para las escenas
 enum EstadoPantalla {
-  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS, AFRICA, EUROPA, ASIA, OCEANIA, AMERICA
+  MENU, SISTEMA_SOLAR, BANDERAS, RECETAS, INJERA, CREPES, POLLO_TANDOORI, TARTA_PAVLOVA, AREPAS, AFRICA, EUROPA, ASIA, OCEANIA, AMERICA, MERCURIO
 }
 
 // Variable para el estado estadoActual de la pantalla
@@ -16,11 +11,11 @@ EstadoPantalla estadoActual = EstadoPantalla.MENU; // Comienza en el menú
 // Inicialización estrellas del menú principal
 int[] estrellas_x;
 int[] estrellas_y;
-int amount_estrellas = (int)random(75, 150);
+int amount_estrellas = (int)random(100, 200);
 float radius_estrellas = 2.5;
 
 // Parámetros para el posicionamiento de los botones
-float baseX = width / 2; 
+float baseX = width / 2;
 float baseY = height / 2 - 50;
 int botonAltura = 30;
 int margen = 10;
@@ -42,8 +37,8 @@ void setup() {
   estrellas_x = new int[amount_estrellas];
   estrellas_y = new int[amount_estrellas];
   for (int counter = 0; counter < amount_estrellas; counter++) {
-    estrellas_x[counter] = (int)random(-width, width * 2);
-    estrellas_y[counter] = (int)random(-height, height * 2);
+    estrellas_x[counter] = (int)random(-1.5 * width, width * 3);
+    estrellas_y[counter] = (int)random(-1.5 * height, height * 3);
   }
 
   // Imagen y creación de la Tierra del menú principal
@@ -411,6 +406,15 @@ void setup() {
   noStroke();
   oceaniaTituloShape = createShape(RECT, width / 2, 175, 512, 323.4);
   oceaniaTituloShape.setTexture(oceaniaTituloImage);
+
+  // Escena planetas Sistema Solar
+  // Mercurio
+
+  MercurioPlaneta = loadImage("TexturaMercurio.jpg");
+  noStroke();
+  sphereDetail(100);
+  esferaMercurioPlaneta = createShape(SPHERE, 1600);
+  esferaMercurioPlaneta.setTexture(MercurioPlaneta);
 }
 
 boolean mouseOverSolar() {
@@ -492,6 +496,9 @@ void draw() {
     break;
   case AMERICA:
     escenaAmerica();
+    break;
+  case MERCURIO:
+    escenaMercurio();
     break;
   }
 }
