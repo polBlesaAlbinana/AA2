@@ -23,6 +23,9 @@ PShape esferaJupiterPlaneta;
 PImage SaturnoPlaneta;
 PShape esferaSaturnoPlaneta;
 
+PImage anillosSaturnoPlaneta;
+PShape anillosSaturnoPlanetaShape;
+
 // Urano
 PImage UranoPlaneta;
 PShape esferaUranoPlaneta;
@@ -211,8 +214,7 @@ void escenaSaturno() {
   pushMatrix();
   rotateX(radians(280));
   rotateZ(radians(-100));
-  noStroke();
-  ellipse(0, 0, 5000, 5000);
+  shape(anillosSaturnoPlanetaShape);
   popMatrix();
 
   popMatrix();

@@ -132,6 +132,16 @@ void setup() {
   esferaSaturnoInf = createShape(SPHERE, radioSaturnoInf);
   esferaSaturnoInf.setTexture(Saturno);
 
+  anillosSaturno = loadImage("anillosSaturno.jpg");
+  noStroke();
+  anillosSaturnoShape = createShape(ELLIPSE, 0, 0, 600, 600);
+  anillosSaturnoShape.setTexture(anillosSaturno);
+
+  anillosSaturnoPlaneta = loadImage("anillosSaturno.jpg");
+  noStroke();
+  anillosSaturnoPlanetaShape = createShape(ELLIPSE, 0, 0, 5000, 5000);
+  anillosSaturnoPlanetaShape.setTexture(anillosSaturnoPlaneta);
+
   // Imagen y creación de Urano
   Urano = loadImage("TexturaUrano.jpg");
   noStroke();
