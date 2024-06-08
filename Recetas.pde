@@ -1,5 +1,12 @@
 // Escenas de las recetas
 
+// Imagenes
+PImage injera;
+PImage crepes;
+PImage polloTandoori;
+PImage tartaPavlova;
+PImage arepas;
+
 void escenaRecetas() {
   println("Escena de recetas mostrada"); // Depuración para verificar la escena
   float baseX = width / 2;
@@ -71,6 +78,20 @@ void escenaInjera() {
   for (int i = 0; i < receta.length; i++) {
     text(receta[i], textX, textY + (i * lineHeight)); // Espaciado entre líneas
   }
+
+  pushMatrix();
+  // Imagen con LUT de Injeras (blanco y negro)
+  for (int counter1=0; counter1<injera.width; counter1++) {
+    for (int counter2=0; counter2<injera.height; counter2++) {
+      color colorPixel = injera.get(counter1, counter2);
+      float luma = 0.299*red(colorPixel)
+        + 0.587*green(colorPixel) + 0.114*blue(colorPixel);
+      colorPixel = color(luma, luma, luma);
+      injera.set(counter1, counter2, colorPixel);
+    }
+    image(injera, width/2, height - 450);
+  }
+  popMatrix();
 }
 
 void escenaCrepes() {
@@ -116,6 +137,20 @@ void escenaCrepes() {
   for (int i = 0; i < receta.length; i++) {
     text(receta[i], textX, textY + (i * lineHeight)); // Espaciado entre líneas
   }
+
+  pushMatrix();
+  // Imagen con LUT de Crepes (blanco y negro)
+  for (int counter1=0; counter1<crepes.width; counter1++) {
+    for (int counter2=0; counter2<crepes.height; counter2++) {
+      color colorPixel = crepes.get(counter1, counter2);
+      float luma = 0.299*red(colorPixel)
+        + 0.587*green(colorPixel) + 0.114*blue(colorPixel);
+      colorPixel = color(luma, luma, luma);
+      crepes.set(counter1, counter2, colorPixel);
+    }
+    image(crepes, width/2, height - 350);
+  }
+  popMatrix();
 }
 
 
@@ -154,6 +189,20 @@ void escenaPolloTandoori() {
   for (int i = 0; i < receta.length; i++) {
     text(receta[i], textX, textY + (i * lineHeight)); // Espaciado entre líneas
   }
+
+  pushMatrix();
+  // Imagen con LUT de Pollo Tandoori (blanco y negro)
+  for (int counter1=0; counter1<polloTandoori.width; counter1++) {
+    for (int counter2=0; counter2<polloTandoori.height; counter2++) {
+      color colorPixel = polloTandoori.get(counter1, counter2);
+      float luma = 0.299*red(colorPixel)
+        + 0.587*green(colorPixel) + 0.114*blue(colorPixel);
+      colorPixel = color(luma, luma, luma);
+      polloTandoori.set(counter1, counter2, colorPixel);
+    }
+    image(polloTandoori, width/2, height - 450);
+  }
+  popMatrix();
 }
 
 void escenaTartaPavlova() {
@@ -197,6 +246,20 @@ void escenaTartaPavlova() {
   for (int i = 0; i < receta.length; i++) {
     text(receta[i], textX, textY + (i * lineHeight)); // Espaciado entre líneas
   }
+  
+    pushMatrix();
+  // Imagen con LUT de Tarta Pavlova (blanco y negro)
+  for (int counter1=0; counter1<tartaPavlova.width; counter1++) {
+    for (int counter2=0; counter2<tartaPavlova.height; counter2++) {
+      color colorPixel = tartaPavlova.get(counter1, counter2);
+      float luma = 0.299*red(colorPixel)
+        + 0.587*green(colorPixel) + 0.114*blue(colorPixel);
+      colorPixel = color(luma, luma, luma);
+      tartaPavlova.set(counter1, counter2, colorPixel);
+    }
+    image(tartaPavlova, width/2, height - 400);
+  }
+  popMatrix();
 }
 
 
@@ -240,4 +303,18 @@ void escenaArepas() {
   for (int i = 0; i < receta.length; i++) {
     text(receta[i], textX, textY + (i * lineHeight)); // Espaciado entre líneas
   }
+
+  pushMatrix();
+  // Imagen con LUT de Arepas (blanco y negro)
+  for (int counter1=0; counter1<arepas.width; counter1++) {
+    for (int counter2=0; counter2<arepas.height; counter2++) {
+      color colorPixel = arepas.get(counter1, counter2);
+      float luma = 0.299*red(colorPixel)
+        + 0.587*green(colorPixel) + 0.114*blue(colorPixel);
+      colorPixel = color(luma, luma, luma);
+      arepas.set(counter1, counter2, colorPixel);
+    }
+    image(arepas, width/2, height - 400);
+  }
+  popMatrix();
 }
