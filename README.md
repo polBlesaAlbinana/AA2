@@ -17,6 +17,7 @@ Principalmente nos hemos centrado en la temática educativa de nivel bajo, a par
 También hemos mostrado algunas recetas de comidas importantes y conocidas del mundo, inspirandonos en el apartado de cocina, también de nivel bajo.
 Para terminar, hemos abarcado la temática de africa al incluir este continente entre todos los demás y receta típica del continente.
 
+
 Cambios realizados para la reentrega del trabajo:
 - Cuando se encuentra en la escena del Sistema Solar, al mantener cualquier número (1 - 8) se pueden visualizar los planetas desde más cerca.
 - Por cada receta que se encuentra en el apartado de recetas se ha añadido una imagen del plato en blanco y negro (LUTs).
